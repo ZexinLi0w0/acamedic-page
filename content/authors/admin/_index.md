@@ -14,7 +14,7 @@ organizations:
   url: https://www.utdallas.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: I’m a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). My academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, I received my bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. My research interests include real-time systems, robotic systems, software engineering and machine learning.
+bio: Zexin Li is a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). His academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
 
 # Interests to show in About widget
 interests:
@@ -41,7 +41,7 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:lizexin0903@gmail.com
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
+- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: fas
   link: https://scholar.google.com/citations?user=iHt-2zwAAAAJ&hl=zh-CN
 - icon: github
