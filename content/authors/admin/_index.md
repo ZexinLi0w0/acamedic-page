@@ -67,4 +67,4 @@ highlight_name: true
 
 I’m a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). My academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, I received my bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. My research interests include real-time systems, robotic systems and machine learning.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
