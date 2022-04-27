@@ -65,6 +65,6 @@ email: "mailto:lizexin0903@gmail.com"
 highlight_name: true
 ---
 
-I’m a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). My academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, I received my bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. My research interests include real-time systems, robotic systems and machine learning.
+Zexin Li is a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). His academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
