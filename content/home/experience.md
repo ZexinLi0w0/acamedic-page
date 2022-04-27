@@ -32,7 +32,9 @@ experience:
     description: |2-
         Responsibilities include:
         
+        * Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
         * Research on energy-efficient autonomous embedded systems.
+        * Research on real-time systems.
 
   - title: Research Internship
     company: Tencent
@@ -57,7 +59,7 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Worked in Dr. Yuqun Zhang's Intelligent Software Engineering Lab which aims to do advanced research on software engineering and artificial intelligence.
+        * Worked in Dr. Yuqun Zhang's Intelligent Software Engineering Lab which aims to doing advanced research on software engineering and artificial intelligence.
         * Research on detecting bugs in deep learning models for autonomous embedded systems.
         * Research on boosting performance of heterogeneous cpu/gpu platforms by designing efficient algorithms for fast task mapping.
         * Research on transferable adversarial attacks of deep learning models.
