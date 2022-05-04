@@ -6,7 +6,7 @@ title: "Efficient algorithms for task mapping on heterogeneous CPU/GPU platforms
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - Zexin Li
-- Yuqun Zhang
+- Yuqun Zhang*
 - Ao Ding
 - Husheng Zhou
 - Cong Liu
