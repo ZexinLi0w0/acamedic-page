@@ -29,8 +29,8 @@ education:
   - course: Ph.D. Candidate in Computer Science
     institution: The University of Texas at Dallas
     year: 2020 - Now
-  - course: Bachelor in Computer Science
-    institution: Southern University of Science and Technology)
+  - course: B.S. in Computer Science
+    institution: Southern University of Science and Technology
     year: 2016 - 2020
 
 # Social/Academic Networking
@@ -41,9 +41,12 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:lizexin0903@gmail.com
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
+- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
+  icon_pack: ai
   link: https://scholar.google.com/citations?user=iHt-2zwAAAAJ&hl=zh-CN
+- icon: cv
+  icon_pack: ai
+  link: https://zexinli.com/uploads/resume.pdf
 - icon: github
   icon_pack: fab
   link: https://github.com/ZexinLi0w0
