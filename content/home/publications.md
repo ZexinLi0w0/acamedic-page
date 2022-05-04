@@ -36,6 +36,6 @@ design:
   columns: '2'
 ---
 
-<!-- {{% callout note %}}
-Corresponding Author
-{{% /callout %}} -->
+{{% callout note %}}
+Full publications by {{< staticref "publication/" "newtab" >}}filtering publications{{< /staticref >}}.
+{{% /callout %}}
