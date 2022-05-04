@@ -2,7 +2,7 @@
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
-active: false
+active: true
 
 # This file represents a page section.
 headless: true
@@ -17,7 +17,7 @@ content:
   # Filter on criteria
   filters:
     folders:
-      - post
+      - news
     tag: ''
     category: ''
     publication_type: ''
@@ -37,3 +37,8 @@ design:
   view: list
   columns: '2'
 ---
+04/2022 - Serve as a reviewer of ECCV 2022.<br>
+01/2022 - Pass my qualifying exam. Become a Ph.D. candidate!<br>
+03/2021 - First paper is accepted by JSA, great thanks to Prof. Yuqun Zhang.<br>
+05/2021 - Begin research intern in Tecent Youtu Lab, Shanghai, China.<br>
+10/2019 - Begin my first research intern in Kuaishou, Shenzhen, China.<br>
