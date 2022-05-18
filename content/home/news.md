@@ -37,6 +37,7 @@ design:
   view: list
   columns: '2'
 ---
+05/2022 - Will move to @UCRiverside in 2022 fall.<br>
 04/2022 - Serve as a reviewer of ECCV 2022.<br>
 01/2022 - Pass my qualifying exam. Become a Ph.D. candidate!<br>
 03/2021 - First paper is accepted by JSA, great thanks to Prof. {{< staticref "http://zhangyuqun.com/" "newtab" >}}Yuqun Zhang{{< /staticref >}}.<br>
