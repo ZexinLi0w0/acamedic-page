@@ -10,8 +10,8 @@ role: Ph.D. Student of Computer Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: The University of Texas at Dallas
-  url: https://www.utdallas.edu/
+- name: The University of California, Riverside
+  url: https:/www.ucr.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: Zexin Li is a first-year Ph.D. student at the University of California, Riverside. His academic advisor is Prof. Cong Liu. Before joining UCR, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
