@@ -6,7 +6,7 @@ title: Zexin Li
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. Candidate of Computer Science
+role: Ph.D. Student of Computer Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -14,7 +14,7 @@ organizations:
   url: https://www.utdallas.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Zexin Li is a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). His academic advisor is Prof. Cong Liu in computer science department. Before joining UTD, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
+bio: Zexin Li is a first-year Ph.D. student at the University of California, Riverside. His academic advisor is Prof. Cong Liu. Before joining UCR, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
 
 # Interests to show in About widget
 interests:
@@ -26,9 +26,12 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: Ph.D. Student in Computer Science
+    institution: The University of California, Riverside
+    year: 2022 - Now
   - course: Ph.D. Candidate in Computer Science
     institution: The University of Texas at Dallas
-    year: 2020 - Now
+    year: 2020 - 2022
   - course: B.S. in Computer Science
     institution: Southern University of Science and Technology
     year: 2016 - 2020
@@ -67,7 +70,6 @@ email: "mailto:lizexin0903@gmail.com"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-
-Zexin Li is a second-year Ph.D. candidate at the University of Texas at Dallas (UTD). His academic advisor is Prof. {{< staticref "https://personal.utdallas.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. in computer science department. Before joining UTD, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
+Zexin Li is a first-year Ph.D. student at the University of California, Riverside. His academic advisor is Prof. {{< staticref "https://personal.utdallas.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. Before joining UCR, he received bachelor’s degree from Southern University of Science and Technology (SUSTech) in July 2020. His research interests include but not limited to real-time systems, robotic systems, software engineering and machine learning.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
