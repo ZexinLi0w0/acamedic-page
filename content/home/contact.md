@@ -26,7 +26,7 @@ content:
   #     captcha: false
 
   # Contact details (edit or remove options as required)
-  email: lizexin0903@gmail.com
+  email: zli536@ucr.edu
   phone: +1(945)217-3149
   address:
     street: ECSS 4.215, UTD
