@@ -43,7 +43,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:lizexin0903@gmail.com
+  link: mailto:zli536@ucr.edu
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: https://scholar.google.com/citations?user=iHt-2zwAAAAJ&hl=zh-CN
@@ -65,7 +65,7 @@ social:
 #   link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "mailto:lizexin0903@gmail.com"
+email: "mailto:zli536@ucr.edu"
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
