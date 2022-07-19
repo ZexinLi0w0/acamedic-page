@@ -26,13 +26,13 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Ph.D. Student in Computer Science
+  - course: Ph.D. Student
     institution: The University of California, Riverside
     year: 2022 - Now
-  - course: Ph.D. Candidate in Computer Science
+  - course: Ph.D. Candidate
     institution: The University of Texas at Dallas
     year: 2020 - 2022
-  - course: B.S. in Computer Science
+  - course: B.S.
     institution: Southern University of Science and Technology
     year: 2016 - 2020
 
