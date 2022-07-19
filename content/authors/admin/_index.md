@@ -55,7 +55,7 @@ social:
   link: https://github.com/ZexinLi0w0
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/%E6%B3%BD%E9%91%AB-%E6%9D%8E-25b985185/
+  link: https://www.linkedin.com/in/zexin-li-25b985185/
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
