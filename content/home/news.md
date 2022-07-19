@@ -37,8 +37,9 @@ design:
   view: list
   columns: '2'
 ---
-05/2022 - Will move to @UCRiverside in 2022 fall.<br>
-01/2022 - Pass my qualifying exam. Become a Ph.D. candidate!<br>
-03/2021 - First paper is accepted by JSA, great thanks to Prof. {{< staticref "http://zhangyuqun.com/" "newtab" >}}Yuqun Zhang{{< /staticref >}}.<br>
-05/2021 - Begin research intern in Tecent Youtu Lab, Shanghai, China.<br>
-10/2019 - Begin my first research intern in Kuaishou, Shenzhen, China.<br>
+09/2022 - Join @UCRiverside in 2022 Fall.<br>
+01/2022 - Pass the qualifying exam. Become a Ph.D. candidate!<br>
+01/2022 - Join Dr. {{< staticref "https://personal.utdallas.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Real-Time System Lab.<br>
+03/2021 - One paper is accepted by JSA, great thanks to Dr. {{< staticref "http://zhangyuqun.com/" "newtab" >}}Yuqun Zhang{{< /staticref >}}.<br>
+05/2021 - Begin the research intern in Tecent Youtu Lab, Shanghai, China.<br>
+10/2019 - Begin the research intern in Kuaishou, Shenzhen, China.<br>
