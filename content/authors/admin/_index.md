@@ -74,6 +74,6 @@ Zexin Li is a Ph.D. student at the University of California, Riverside. His acad
 
 Before joining UCR, he spent roughly one and a half years with Kwai's and Tencent's research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor's degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "http://zhangyuqun.com/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 
-I am always open to any cooperation. If you are interesting in working with me, just drop me an email!
+<strong>I am always open to any cooperation. If you are interesting in working with me, just drop me an email!</strong>
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
