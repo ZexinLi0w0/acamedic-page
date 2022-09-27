@@ -29,10 +29,10 @@ content:
   email: zli536@ucr.edu
   phone: +1(945)217-3149
   address:
-    street: ECSS 4.215, UTD
-    city: Richardson
-    region: TX
-    postcode: '75080'
+    street: 369 Winston Chung hall, 900 University Avenue
+    city: Riverside
+    region: CA
+    postcode: '92521'
     country: United States
     country_code: US
   # coordinates:
