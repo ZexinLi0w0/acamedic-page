@@ -56,6 +56,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/zexin-li-25b985185/
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/lizexin0903
 - icon: comments
   icon_pack: fas
   link: https://blog.zexinli.com
