@@ -6,7 +6,7 @@ title: Zexin Li
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. Student of Computer Science
+role: Ph.D. Student of EECS
 
 # Organizations/Affiliations to show in About widget
 organizations:
