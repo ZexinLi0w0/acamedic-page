@@ -37,7 +37,7 @@ design:
   view: list
   columns: '2'
 ---
-09/2022 - Join {{< staticref "https://www.ucr.edu/" "newtab" >}}UCRiverside{{< /staticref >}} in 2022 Fall.<br>
+09/2022 - Join {{< staticref "https://www.ucr.edu/" "newtab" >}}UCRiverside{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Intelligent Robotics Lab in 2022 Fall.<br>
 01/2022 - Pass the qualifying exam. Become a Ph.D. candidate!<br>
 01/2022 - Join {{< staticref "https://www.utdallas.edu/" "newtab" >}}UTDallas{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Real-Time System Lab in 2022 Spring.<br>
 05/2021 - Begin the research intern in {{< staticref "https://open.youtu.qq.com" "newtab" >}}Tecent Youtu Lab{{< /staticref >}}, Shanghai, China.<br>
