@@ -35,6 +35,8 @@ content:
     postcode: '92521'
     country: United States
     country_code: US
+  office_hours:
+    'Email for appointment'
   # coordinates:
   #   latitude: '37.4275'
   #   longitude: '-122.1697'
