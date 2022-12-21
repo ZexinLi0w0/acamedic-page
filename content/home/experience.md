@@ -24,15 +24,29 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
   - title: Research Assistant
+    company: The University of California, Riverside
+    company_url: 'https://www.ucr.edu/'
+    company_logo:
+    location: Riverside, CA
+    date_start: '2022-10-01'
+    date_end: 'TBD'
+    description: |2-
+    Responsibilities include:
+
+      * Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
+      * Research on energy-efficient autonomous embedded systems.
+      * Research on real-time systems.
+
+  - title: Research Assistant
     company: The University of Texas at Dallas
     company_url: 'https://www.utdallas.edu/'
-    company_logo: 
+    company_logo:
     location: Richardson, TX
     date_start: '2020-08-01'
-    date_end: '2022-01-01'
+    date_end: '2022-09-30'
     description: |2-
         Responsibilities include:
-        
+
         * Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
         * Research on energy-efficient autonomous embedded systems.
         * Research on real-time systems.
