@@ -33,9 +33,9 @@ experience:
     description: |2-
     Responsibilities include:
 
-      * Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
-      * Research on energy-efficient autonomous embedded systems.
-      * Research on real-time systems.
+      - Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
+      - Research on energy-efficient autonomous embedded systems.
+      - Research on real-time systems.
 
   - title: Research Assistant
     company: The University of Texas at Dallas
@@ -47,9 +47,9 @@ experience:
     description: |2-
         Responsibilities include:
 
-        * Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
-        * Research on energy-efficient autonomous embedded systems.
-        * Research on real-time systems.
+        - Worked in Dr. Cong Liu's Real-Time System Lab which aims to building predictable system software for autonomous systems that take its own actions, with robotics and autonomous driving being the focused application.
+        - Research on energy-efficient autonomous embedded systems.
+        - Research on real-time systems.
 
   - title: Research Internship
     company: Tencent
@@ -61,8 +61,8 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Worked in Tencent Youtu Lab which focus on advanced research on face recognition and its applications.
-        * Research on transferable adversarial attack on face recognition systems.
+        - Worked in Tencent Youtu Lab which focus on advanced research on face recognition and its applications.
+        - Research on transferable adversarial attack on face recognition systems.
 
   - title: Research Assistant
     company: Southern University of Science and Technology of China
@@ -74,10 +74,10 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Worked in Dr. Yuqun Zhang's Intelligent Software Engineering Lab which aims to doing advanced research on software engineering and artificial intelligence.
-        * Research on detecting bugs in deep learning models for autonomous embedded systems.
-        * Research on boosting performance of heterogeneous cpu/gpu platforms by designing efficient algorithms for fast task mapping.
-        * Research on transferable adversarial attacks of deep learning models.
+        - Worked in Dr. Yuqun Zhang's Intelligent Software Engineering Lab which aims to doing advanced research on software engineering and artificial intelligence.
+        - Research on detecting bugs in deep learning models for autonomous embedded systems.
+        - Research on boosting performance of heterogeneous cpu/gpu platforms by designing efficient algorithms for fast task mapping.
+        - Research on transferable adversarial attacks of deep learning models.
 
   - title: Research Internship
     company: Kwai Inc.
@@ -89,10 +89,10 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Worked in Peer Content Delivery Network (PCDN) team which aims to develop and maintain PCDN system, involving technical stack: C++, C and Docker.
-        * Research on Peer Content Delivery Network (PCDN) optimization, including system-level optimization and application-level optimization.
-        * Updated the internal web protocol framework in PCDN backend to boost overall transmission speed of videos and decrease the retransmission ratio.
-        * Wrote tests for the backend service and deploy grey testing for over 10000 third-party edge devices.
+        - Worked in Peer Content Delivery Network (PCDN) team which aims to develop and maintain PCDN system, involving technical stack: C++, C and Docker.
+        - Research on Peer Content Delivery Network (PCDN) optimization, including system-level optimization and application-level optimization.
+        - Updated the internal web protocol framework in PCDN backend to boost overall transmission speed of videos and decrease the retransmission ratio.
+        - Wrote tests for the backend service and deploy grey testing for over 10000 third-party edge devices.
 design:
   columns: '2'
 ---
