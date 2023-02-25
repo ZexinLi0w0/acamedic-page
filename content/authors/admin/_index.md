@@ -14,14 +14,13 @@ organizations:
   url: "https://www.ucr.edu"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Zexin Li is a Ph.D. student at the University of California, Riverside (UCR). His academic advisor is Dr. Cong Liu. His research interests include but are not limited to the inter-disciplinary fields of real-time systems, robotic systems, software engineering, and machine learning. Before joining UCR, he spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020.
+bio: Zexin Li is a Ph.D. student at the University of California, Riverside (UCR). His academic advisor is Dr. Cong Liu. His research interests include but are not limited to the inter-disciplinary fields of real-time embedded systems, machine learning systems, and software engineering. Before joining UCR, he spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020.
 
 # Interests to show in About widget
 interests:
-- Real-time System
-- Robotic System
+- Real-time Embedded System
+- Machine Learning System
 - Software Engineering
-- Machine Learning
 
 # Education to show in About widget
 education:
@@ -76,7 +75,7 @@ email: "mailto:zli536@ucr.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Zexin Li is a Ph.D. student at the University of California, Riverside (UCR). His academic advisor is Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. His research interests include but are not limited to the inter-disciplinary fields of real-time systems, robotic systems, software engineering, and machine learning.
+Zexin Li is a Ph.D. student at the University of California, Riverside (UCR). His academic advisor is Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. His research interests include but are not limited to the inter-disciplinary fields of real-time embedded systems, machine learning systems, and software engineering.
 
 Before joining UCR, he spent roughly one and a half years with Kwai's and Tencent's research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor's degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 
