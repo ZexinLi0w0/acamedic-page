@@ -32,7 +32,7 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: In *The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023*
-publication_short: In *CVPR*
+publication_short: In *CVPR'23*
 
 abstract: To appear
 
