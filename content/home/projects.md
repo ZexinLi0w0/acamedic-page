@@ -31,6 +31,8 @@ content:
     tag: Deep Learning
   - name: System
     tag: System
+  - name: Robotics
+    tag: Robotics
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
