@@ -9,7 +9,7 @@ date: "2021-01-01T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Photo by Zexin Li
+  caption: Task Mapping for Heterogeneous Systems
   focal_point: Smart
 
 # Slides (optional).

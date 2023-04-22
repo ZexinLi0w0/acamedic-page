@@ -9,7 +9,7 @@ date: "2023-03-20T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Photo by Zexin Li
+  caption: Sibling-Attack
   focal_point: Smart
 
 # Slides (optional).
