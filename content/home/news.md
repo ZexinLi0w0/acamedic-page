@@ -36,9 +36,9 @@ design:
   # Choose a view for the listings:
   view: list
   columns: '2'
+  # 12/2022 - Serve as a reviewer of {{< staticref "https://dblp.uni-trier.de/db/journals/ppna/index.html" "newtab" >}}PPNA{{< /staticref >}}.<br>
 ---
 02/2023 - One paper is accepted by {{< staticref "https://cvpr.thecvf.com/" "newtab" >}}CVPR'23{{< /staticref >}}.<br>
-12/2022 - Serve as a reviewer of {{< staticref "https://dblp.uni-trier.de/db/journals/ppna/index.html" "newtab" >}}PPNA{{< /staticref >}}.<br>
 09/2022 - Join {{< staticref "https://www.ucr.edu/" "newtab" >}}UCRiverside{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Intelligent Robotics Lab in 2022 Fall.<br>
 01/2022 - Pass the qualifying exam. Become a Ph.D. candidate!<br>
 01/2022 - Join {{< staticref "https://www.utdallas.edu/" "newtab" >}}UTDallas{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Real-Time System Lab in 2022 Spring.<br>
