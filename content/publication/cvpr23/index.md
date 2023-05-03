@@ -6,7 +6,7 @@ title: "Sibling-Attack: Rethinking Transferable Adversarial Attacks against Face
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - Zexin Li*
-- Bangjie Yin*
+- Bangjie Yin
 - Taiping Yao
 - Junfeng Guo
 - Shouhong Ding
