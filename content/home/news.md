@@ -38,6 +38,7 @@ design:
   columns: '2'
   # 12/2022 - Serve as a reviewer of {{< staticref "https://dblp.uni-trier.de/db/journals/ppna/index.html" "newtab" >}}PPNA{{< /staticref >}}.<br>
 ---
+06/2023 - One paper is accepted by {{< staticref "https://ieee-iros.org/" "newtab" >}}IROS'23{{< /staticref >}}.<br>
 05/2023 - Two papers are accepted by {{< staticref "https://2023.aclweb.org/" "newtab" >}}ACL'23{{< /staticref >}}.<br>
 02/2023 - One paper is accepted by {{< staticref "https://cvpr.thecvf.com/" "newtab" >}}CVPR'23{{< /staticref >}}.<br>
 09/2022 - Join {{< staticref "https://www.ucr.edu/" "newtab" >}}UCRiverside{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Intelligent Robotics Lab in 2022 Fall.<br>
