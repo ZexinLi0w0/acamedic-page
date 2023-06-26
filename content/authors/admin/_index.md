@@ -14,14 +14,13 @@ organizations:
   url: "https://www.ucr.edu"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. Cong Liu. Before joining UCR, he spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests include but are not limited to the interdisciplinary fields of real-time embedded systems, machine learning systems, adversarial machine learning, and software engineering. Feel free to contact me if we share common research interests.
+bio: I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. Cong Liu. Before joining UCR, I spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests include but are not limited to the interdisciplinary fields of real-time embedded systems, on-device machine learning, and adversarial machine learning. I am actively looking for cooperation in the following topics: (1) deploying ML models on real-time embedded devices, (2) system-application level co-optimization of complex machine learning systems, and (3) improving performance robustness in existing ML infrastructures. Feel free to contact me if we share common research interests.
 
 # Interests to show in About widget
 interests:
 - Real-time Embedded System
-- Machine Learning System
+- On-device Machine Learning
 - Adversarial Machine Learning
-- Software Engineering
 
 # Education to show in About widget
 education:
@@ -76,9 +75,11 @@ email: "mailto:zli536@ucr.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. Before joining UCR, he spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. He received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
+I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. Before joining UCR, I spent roughly one and a half years with Kwai’s and Tencent’s research groups and worked as a research assistant at the University of Texas at Dallas (UTD) until August 2022. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 
-My research interests include but are not limited to the interdisciplinary fields of real-time embedded systems, machine learning systems, adversarial machine learning, and software engineering.
+My research interests include but are not limited to the interdisciplinary fields of real-time embedded systems, on-device machine learning, and adversarial machine learning.
+
+I am actively looking for cooperation in the following topics: (1) deploying ML models on real-time embedded devices, (2) system-application level co-optimization of complex machine learning systems, and (3) improving performance robustness in existing ML infrastructures.
 
 <strong>Feel free to contact me if we share common research interests.</strong>
 
