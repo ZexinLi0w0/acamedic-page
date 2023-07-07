@@ -27,7 +27,7 @@ content:
 
   # Contact details (edit or remove options as required)
   email: zli536@ucr.edu
-  phone: -
+  phone: ""
   address:
     street: 369 Winston Chung hall, 900 University Avenue
     city: Riverside
