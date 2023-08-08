@@ -37,7 +37,6 @@ design:
   view: list
   columns: '2'
 ---
-08/2023 - Received conference travel grants from {{< staticref "https://gsa.ucr.edu/ctg/" "newtab" >}}UCR GSA{{< /staticref >}}.<br>
 07/2023 - Three papers are accepted by {{< staticref "http://2023.rtss.org/" "newtab" >}}RTSS'23{{< /staticref >}}.<br>
 06/2023 - One paper is accepted by {{< staticref "https://ieee-iros.org/" "newtab" >}}IROS'23{{< /staticref >}}.<br>
 05/2023 - Two papers are accepted by {{< staticref "https://2023.aclweb.org/" "newtab" >}}ACL'23{{< /staticref >}}.<br>
