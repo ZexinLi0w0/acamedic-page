@@ -46,7 +46,7 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'https://arxiv.org/pdf/2305.03655.pdf'
+url_pdf: 'https://aclanthology.org/2023.acl-long.100.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
