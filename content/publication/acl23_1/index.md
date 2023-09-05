@@ -50,7 +50,7 @@ featured: false
 #   url: http://example.org
 
 url_pdf: 'https://aclanthology.org/2023.acl-long.395.pdf'
-url_code: ''
+url_code: 'https://github.com/MatthewCYM/SAME'
 url_dataset: ''
 url_poster: ''
 url_project: ''
