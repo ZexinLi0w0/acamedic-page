@@ -47,7 +47,7 @@ featured: false
 #   url: http://example.org
 
 url_pdf: 'https://aclanthology.org/2023.acl-long.100.pdf'
-url_code: ''
+url_code: 'https://github.com/yul091/DGSlow'
 url_dataset: ''
 url_poster: ''
 url_project: ''
