@@ -46,6 +46,9 @@ social:
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: https://scholar.google.com/citations?user=iHt-2zwAAAAJ&hl=zh-CN
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Zexin-Li-5
 - icon: github
   icon_pack: fab
   link: https://github.com/ZexinLi0w0
