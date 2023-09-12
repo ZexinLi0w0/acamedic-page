@@ -2,6 +2,7 @@
 title: Multi-Input Multi-Output On-Device Deep Learning
 summary: 
 tags:
+- Deep Learning
 - Robotics
 date: "2023-04-27T00:00:00Z"
 
