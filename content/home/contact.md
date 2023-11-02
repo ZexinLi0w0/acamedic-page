@@ -58,7 +58,3 @@ content:
 design:
   columns: '2'
 ---
-
-<div style="width: 155px; height: 155px;">
-  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=bJhfUbYqDhd4frxLHup0jlnZW7Z7CLtj4kG301gzAE8"></script>
-</div>
