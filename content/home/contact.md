@@ -35,8 +35,8 @@ content:
     postcode: '92521'
     country: United States
     country_code: US
-  office_hours:
-    'Email for appointment'
+  #  office_hours:
+  #    'Email for appointment'
   # coordinates:
   #   latitude: '37.4275'
   #   longitude: '-122.1697'
@@ -44,7 +44,7 @@ content:
   # office_hours:
   #   - 'Monday 10:00 to 13:00'
   #   - 'Wednesday 09:00 to 10:00'
-  # appointment_url: 'https://calendly.com'
+  appointment_url: 'https://calendly.com/zexinliucr'
   # contact_links:
   #   - icon: twitter
   #     icon_pack: fab
