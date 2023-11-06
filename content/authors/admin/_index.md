@@ -41,8 +41,11 @@ education:
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
 - icon: envelope
-  icon_pack: fas
+  icon_pack: far
   link: mailto:zli536@ucr.edu
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/221/0808-1.html
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: https://scholar.google.com/citations?user=iHt-2zwAAAAJ&hl=zh-CN
@@ -58,10 +61,7 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/lizexin0903
-- icon: instagram
-  icon_pack: fab
-  link: https://www.instagram.com/zexinli0w0/
-- icon: comments
+- icon: blog
   icon_pack: fas
   link: https://blog.zexinli.com
 
