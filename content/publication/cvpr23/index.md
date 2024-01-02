@@ -42,7 +42,7 @@ summary:
 tags: [deep learning]
 
 # Display this page in the Featured widget?
-featured: false
+featured: true
 
 # Custom links (uncomment lines below)
 # links:
@@ -50,7 +50,7 @@ featured: false
 #   url: http://example.org
 
 url_pdf: 'https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Sibling-Attack_Rethinking_Transferable_Adversarial_Attacks_Against_Face_Recognition_CVPR_2023_paper.pdf'
-url_code: ''
+url_code: 'https://github.com/Tencent/TFace/tree/Adv-Attack-Defense/security/tasks/Adv-Attack-Defense/Sibling-Attack'
 url_dataset: ''
 url_poster: ''
 url_project: ''
