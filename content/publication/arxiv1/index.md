@@ -8,7 +8,6 @@ authors:
 - Zexin Li
 - Xiaoxi He
 - Yufei Li
-- Shahab Nikkhoo
 - Wei Yang
 - Lothar Thiele
 - Cong Liu
