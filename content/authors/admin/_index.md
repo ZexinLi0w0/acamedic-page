@@ -25,7 +25,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Ph.D. Student
+  - course: Ph.D. Candidate
     institution: The University of California, Riverside
     year: 2022 - Now
   - course: Ph.D. Candidate
