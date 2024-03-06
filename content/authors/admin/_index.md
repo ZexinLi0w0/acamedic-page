@@ -20,7 +20,7 @@ bio: I am a Ph.D. student at the University of California, Riverside (UCR). I am
 interests:
 - Real-time Embedded System
 - On-device Machine Learning
-- Adversarial Machine Learning
+- Efficient Machine Learning
 
 # Education to show in About widget
 education:
