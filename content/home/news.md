@@ -37,12 +37,14 @@ design:
   view: list
   columns: '2'
 ---
+03/2024 - Pass the qualification exam of Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}UCR{{< /staticref >}}.<br>
 07/2023 - Three papers are accepted by {{< staticref "http://2023.rtss.org/" "newtab" >}}RTSS'23{{< /staticref >}}.<br>
 06/2023 - One paper is accepted by {{< staticref "https://ieee-iros.org/" "newtab" >}}IROS'23{{< /staticref >}}.<br>
 05/2023 - Two papers are accepted by {{< staticref "https://2023.aclweb.org/" "newtab" >}}ACL'23{{< /staticref >}}.<br>
 02/2023 - One paper is accepted by {{< staticref "https://cvpr.thecvf.com/" "newtab" >}}CVPR'23{{< /staticref >}}.<br>
 09/2022 - Honored to receive the Dean's Distinguished Fellowship, UCR.<br>
 09/2022 - Join {{< staticref "https://www.ucr.edu/" "newtab" >}}UCRiverside{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Autonomous Embedded Systems Lab in 2022 Fall.<br>
+01/2022 - Pass the qualification exam of Ph.D. at {{< staticref "https://www.utdallas.edu/" "newtab" >}}UTDallas{{< /staticref >}}.<br>
 01/2022 - Join {{< staticref "https://www.utdallas.edu/" "newtab" >}}UTDallas{{< /staticref >}} and Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}'s Real-Time System Lab in 2022 Spring.<br>
 05/2021 - Begin the research intern in {{< staticref "https://open.youtu.qq.com" "newtab" >}}Tecent Youtu Lab{{< /staticref >}}, Shanghai, China.<br>
 04/2021 - Admitted into {{< staticref "https://ur.tencent.com/article/261" "newtab" >}}Tencent Rhino Bird Elite Talent Training Program{{< /staticref >}}.<br>
