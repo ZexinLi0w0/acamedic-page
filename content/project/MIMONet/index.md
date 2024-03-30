@@ -1,5 +1,5 @@
 ---
-title: MIMONet
+title: "MIMONet: Multi-Input Multi-Output On-Device Deep Learning"
 summary: 
 tags:
 - Deep Learning
