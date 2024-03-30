@@ -1,5 +1,5 @@
 ---
-title: "MIMONet: Multi-Input Multi-Output On-Robot Deep Learning”
+title: MIMONet
 summary: 
 tags:
 - Deep Learning
