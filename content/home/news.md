@@ -37,6 +37,7 @@ design:
   view: list
   columns: '2'
 ---
+04/2024 - One paper is accepted by {{< staticref "https://2024.esec-fse.org/" "newtab" >}}FSE'24{{< /staticref >}}.<br>
 03/2024 - Pass the qualification exam of Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}UCR{{< /staticref >}}.<br>
 07/2023 - Three papers are accepted by {{< staticref "http://2023.rtss.org/" "newtab" >}}RTSS'23{{< /staticref >}}.<br>
 06/2023 - One paper is accepted by {{< staticref "https://ieee-iros.org/" "newtab" >}}IROS'23{{< /staticref >}}.<br>
