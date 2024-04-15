@@ -29,7 +29,7 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: In *ACM International Conference on the Foundations of Software Engineering 2024*
-publication_short: In *FSE2024*
+publication_short: In *FSE'24*
 
 abstract: To appear soon.
   
