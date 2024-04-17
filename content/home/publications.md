@@ -1,7 +1,7 @@
 ---
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
-active: false
+active: true
 widget: pages
 
 # This file represents a page section.
@@ -10,7 +10,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 30
 
-title: Selected Publications
+title: Publications
 subtitle: ''
 
 content:
@@ -22,7 +22,7 @@ content:
     category: ''
     publication_type: ''
     author: ''
-    exclude_featured: true
+    exclude_featured: false
     exclude_future: false
     exclude_past: false
   # Choose how many pages you would like to display (0 = all pages)
@@ -36,7 +36,3 @@ design:
   view: citation
   columns: '2'
 ---
-
-{{% callout note %}}
-Full publications by {{< staticref "publication/" "newtab" >}}filtering publications{{< /staticref >}}.
-{{% /callout %}}
