@@ -63,7 +63,7 @@ social:
   link: https://twitter.com/lizexin0903
 - icon: blog
   icon_pack: fas
-  link: https://blog.zexinli.com
+  link: https://zexinli0w0.github.io/
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
