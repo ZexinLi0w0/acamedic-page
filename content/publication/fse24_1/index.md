@@ -46,8 +46,8 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
-url_code: ''
+url_pdf: 'https://dl.acm.org/doi/pdf/10.1145/3660814'
+url_code: 'https://github.com/anonymousGithub2022/DeciX'
 url_dataset: ''
 url_poster: ''
 url_project: ''
