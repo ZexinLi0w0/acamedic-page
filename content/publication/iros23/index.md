@@ -48,7 +48,7 @@ featured: false
 #   url: http://example.org
 
 url_pdf: 'https://arxiv.org/pdf/2307.15944.pdf'
-url_code: ''
+url_code: 'https://github.com/UCR-Intelligent-Robotics-Lab/greedy_agent'
 url_dataset: ''
 url_poster: ''
 url_project: ''
