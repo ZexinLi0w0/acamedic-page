@@ -19,7 +19,7 @@ authors:
 # - "Equal contribution"
 
 date: "2023-05-01T00:00:00Z"
-doi: ""
+doi: "10.18653/v1/2023.acl-long.395"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-05-01T00:00:00Z"

@@ -17,7 +17,7 @@ authors:
 # - "Equal contribution"
 
 date: "2023-06-20T00:00:00Z"
-doi: ""
+doi: "10.1109/IROS55552.2023.10341884"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-06-20T00:00:00Z"

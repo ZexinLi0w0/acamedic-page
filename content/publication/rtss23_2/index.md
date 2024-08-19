@@ -16,7 +16,7 @@ authors:
 # - "Equal contribution"
 
 date: "2023-07-30T00:00:00Z"
-doi: ""
+doi: "10.1109/rtss59052.2023.00027"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-07-30T00:00:00Z"
