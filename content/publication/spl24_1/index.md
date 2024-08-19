@@ -17,7 +17,7 @@ authors:
 # - "Equal contribution"
 
 date: "2024-08-16T00:00:00Z"
-doi: "https://doi.org/10.1109/LSP.2024.3443711"
+doi: "10.1109/LSP.2024.3443711"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-08-16T00:00:00Z"
