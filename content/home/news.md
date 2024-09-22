@@ -38,6 +38,7 @@ design:
   columns: '2'
 ---
 08/2024 - One paper is accepted by {{< staticref "https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters" "newtab" >}}IEEE Signal Processing Letters{{< /staticref >}}.<br>
+07/2023 - Two papers are accepted by {{< staticref "http://2024.rtss.org/" "newtab" >}}RTSS'24{{< /staticref >}}.<br>
 04/2024 - One paper is accepted by {{< staticref "https://2024.esec-fse.org/" "newtab" >}}FSE'24{{< /staticref >}}.<br>
 03/2024 - Pass the qualification exam of Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}UCR{{< /staticref >}}.<br>
 07/2023 - Three papers are accepted by {{< staticref "http://2023.rtss.org/" "newtab" >}}RTSS'23{{< /staticref >}}.<br>
