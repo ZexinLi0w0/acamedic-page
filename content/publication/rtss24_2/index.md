@@ -16,7 +16,7 @@ authors:
 # - "Equal contribution"
 
 date: "2024-09-20T00:00:00Z"
-doi: ""
+doi: "10.1109/RTSS62706.2024.00016"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-09-15T00:00:00Z"
@@ -46,7 +46,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'https://arxiv.org/abs/2410.13084'
+url_pdf: 'https://doi.org/10.1109/RTSS62706.2024.00016'
 url_code: 'https://github.com/rtenlab/BOXR.git'
 url_dataset: ''
 url_poster: ''
