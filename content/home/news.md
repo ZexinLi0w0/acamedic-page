@@ -37,6 +37,7 @@ design:
   view: list
   columns: '2'
 ---
+08/2025 - Two papers are accepted by {{< staticref "https://2025.emnlp.org/" "newtab" >}}EMNLP'25{{< /staticref >}}.<br>
 07/2025 - One paper is accepted by {{< staticref "http://2025.rtss.org/" "newtab" >}}RTSS'25{{< /staticref >}}.<br>
 08/2024 - One paper is accepted by {{< staticref "https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters" "newtab" >}}IEEE Signal Processing Letters{{< /staticref >}}.<br>
 07/2024 - Two papers are accepted by {{< staticref "http://2024.rtss.org/" "newtab" >}}RTSS'24{{< /staticref >}}.<br>
