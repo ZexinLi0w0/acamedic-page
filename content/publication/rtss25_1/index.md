@@ -16,7 +16,7 @@ authors:
 # - "Equal contribution"
 
 date: "2025-07-20T00:00:00Z"
-doi: ""
+doi: "https://arxiv.org/pdf/2507.21276"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-07-20T00:00:00Z"
