@@ -37,6 +37,7 @@ design:
   view: list
   columns: '2'
 ---
+12/2025 - Our RTSS'25 paper received <span style="color: red;">Outstanding Paper Award</span>.<br>
 11/2025 - One paper is accepted by {{< staticref "https://aaai.org/conference/aaai/aaai-26/" "newtab" >}}AAAI'26{{< /staticref >}}.<br>
 08/2025 - Two papers are accepted by {{< staticref "https://2025.emnlp.org/" "newtab" >}}EMNLP'25{{< /staticref >}}.<br>
 07/2025 - One paper is accepted by {{< staticref "http://2025.rtss.org/" "newtab" >}}RTSS'25{{< /staticref >}}.<br>
