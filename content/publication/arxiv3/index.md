@@ -29,8 +29,8 @@ publishDate: "2025-03-05T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Arxiv*
-publication_short: In *Arxiv*
+publication: In *Transactions on Machine Learning Research*
+publication_short: In *TMLR*
 
 abstract: "Incorporating self-supervised learning (SSL) before standard supervised learning (SL) has become a widely used strategy to enhance model performance, particularly in data-limited scenarios. However, this approach introduces a trade-off between computation and performance: while SSL helps with representation learning, it requires a separate, often time-consuming training phase, increasing computational overhead and limiting efficiency in resource-constrained settings. To address these challenges, we propose MixTraining, a novel framework that interleaves several SSL and SL epochs within a unified mixtraining training phase, featuring a smooth transition between two learning objectives. MixTraining enhances synergy between SSL and SL for improved accuracy and consolidates shared computation steps to reduce computation overhead. MixTraining is versatile and applicable to both single-task and multi-task learning scenarios. Extensive experiments demonstrate that MixTraining offers a superior compute-performance trade-off compared to conventional pipelines, achieving an 8.81% absolute accuracy gain (18.89% relative accuracy gain) on the TinyImageNet dataset while accelerating training by up to 1.29x
 with the ViT-Tiny model."
