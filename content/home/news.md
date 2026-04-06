@@ -37,7 +37,7 @@ design:
   view: list
   columns: '2'
 ---
-04/2026 - Two papers are accepted by {{< staticref "https://2026.aclweb.org/" "newtab" >}}ACL{{< /staticref >}}.<br>
+04/2026 - Two papers are accepted by {{< staticref "https://2026.aclweb.org/" "newtab" >}}ACL'26{{< /staticref >}}.<br>
 03/2026 - One paper is accepted by {{< staticref "https://jmlr.org/tmlr/" "newtab" >}}TMLR{{< /staticref >}}.<br>
 12/2025 - Our RTSS'25 paper received <span style="color: red;">Outstanding Paper Award</span>.<br>
 11/2025 - One paper is accepted by {{< staticref "https://aaai.org/conference/aaai/aaai-26/" "newtab" >}}AAAI'26{{< /staticref >}}.<br>
