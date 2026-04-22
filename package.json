@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@netlify/blobs": "^8.1.0",
-    "@netlify/functions": "^3.1.11"
+    "@netlify/blobs": "^10.0.10",
+    "@netlify/functions": "^4.2.5"
   }
 }
