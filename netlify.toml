@@ -32,3 +32,8 @@
   from = "/mos-eval-ui/api/stats"
   to = "/.netlify/functions/mos-stats"
   status = 200
+
+[[redirects]]
+  from = "/mos-eval-ui/api/reset"
+  to = "/.netlify/functions/mos-reset"
+  status = 200

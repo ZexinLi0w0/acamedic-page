@@ -17,6 +17,10 @@ export function sessionsStore() {
   return getStore({ name: "mos-sessions", consistency: "strong" });
 }
 
+export function sortSessionItems(items) {
+  return items.slice().sort((a, b) => a.order - b.order);
+}
+
 export function jsonResponse(payload, init = {}) {
   const headers = new Headers(init.headers || {});
   headers.set("content-type", "application/json; charset=utf-8");

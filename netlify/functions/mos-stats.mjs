@@ -1,4 +1,4 @@
-import { jsonResponse, sessionsStore } from "./mos-shared.mjs";
+import { jsonResponse, sessionsStore, sortSessionItems } from "./mos-shared.mjs";
 
 export default async function handler(request) {
   if (request.method !== "GET") {
@@ -21,12 +21,14 @@ export default async function handler(request) {
     if (!session || !Array.isArray(session.items)) {
       continue;
     }
+    const orderedItems = sortSessionItems(session.items);
     sessions.push({
       session_id: session.session_id,
       submitted_at: session.submitted_at,
-      items: session.items.length,
+      user_agent: session.user_agent || "",
+      items: orderedItems,
     });
-    for (const item of session.items) {
+    for (const item of orderedItems) {
       if (!byGroup[item.group]) {
         continue;
       }
@@ -44,6 +46,15 @@ export default async function handler(request) {
     sessions: sessions.length,
     ratings: byGroup.clean.n + byGroup.poisoned.n,
     by_group: byGroup,
-    recent_sessions: sessions.sort((a, b) => b.submitted_at - a.submitted_at).slice(0, 20),
+    recent_sessions: sessions
+      .slice()
+      .sort((a, b) => b.submitted_at - a.submitted_at)
+      .slice(0, 20)
+      .map((session) => ({
+        session_id: session.session_id,
+        submitted_at: session.submitted_at,
+        items: session.items.length,
+      })),
+    session_records: sessions.slice().sort((a, b) => b.submitted_at - a.submitted_at),
   });
 }
