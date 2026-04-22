@@ -124,6 +124,10 @@
         cursor: pointer;
         font-size: 0.9rem;
       }
+      .restart[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
       @media (max-width: 540px) {
         .ratings { grid-template-columns: repeat(5, minmax(0, 1fr)); }
         .ratings button { font-size: 0.75rem; padding: 10px 4px; }
@@ -161,32 +165,15 @@
       <div class="card finish" id="finishCard">
         <h3>Finished</h3>
         <p>Thanks for completing the listening test.</p>
-        <p>Your ratings have been recorded.</p>
+        <p id="finishMessage">Submitting your ratings...</p>
         <div class="row">
           <button class="restart" id="restartBtn">Start a New Session</button>
         </div>
       </div>
     </div>
 
-    <form
-      name="mos-eval-score"
-      id="scoreForm"
-      method="POST"
-      action="/mos-eval-ui/"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      hidden
-    >
-      <input type="hidden" name="form-name" value="mos-eval-score" />
-      <input type="text" name="bot-field" />
-      <input type="hidden" name="id" />
-      <input type="hidden" name="filename" />
-      <input type="hidden" name="group" />
-      <input type="hidden" name="score" />
-      <input type="hidden" name="ts" />
-    </form>
-
     <script>
+      const SUBMIT_URL = "/mos-eval-ui/api/submit";
       const CLIPS = [
         {
           filename: "sample_clean_01.wav",
@@ -226,13 +213,15 @@
       const statsBody = document.getElementById("statsBody");
       const testPanel = document.getElementById("testPanel");
       const finishCard = document.getElementById("finishCard");
+      const finishMessage = document.getElementById("finishMessage");
       const restartBtn = document.getElementById("restartBtn");
-      const scoreForm = document.getElementById("scoreForm");
 
       let current = null;
       let busy = false;
       let clipQueue = [];
       let currentIndex = 0;
+      let sessionId = "";
+      let results = [];
 
       function shuffledClips() {
         const list = CLIPS.slice();
@@ -249,9 +238,13 @@
         clipQueue = shuffledClips();
         currentIndex = 0;
         current = null;
+        sessionId = crypto.randomUUID();
+        results = [];
         setStatus("");
+        finishMessage.textContent = "Submitting your ratings...";
         finishCard.classList.remove("show");
         testPanel.classList.remove("hidden");
+        restartBtn.disabled = false;
         renderProgress();
       }
 
@@ -268,6 +261,7 @@
         for (const btn of ratingsEl.querySelectorAll("button")) {
           btn.disabled = value || !current;
         }
+        restartBtn.disabled = value;
       }
 
       function setStatus(message) {
@@ -310,23 +304,12 @@
         setBusy(true);
         setStatus("Submitting score " + score + "...");
         try {
-          scoreForm.elements.id.value = current.id;
-          scoreForm.elements.filename.value = current.filename;
-          scoreForm.elements.group.value = current.group;
-          scoreForm.elements.score.value = String(score);
-          scoreForm.elements.ts.value = String(Date.now());
-
-          const formData = new FormData(scoreForm);
-          const body = new URLSearchParams(formData).toString();
-          const res = await fetch(scoreForm.action, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body,
+          results.push({
+            order: currentIndex + 1,
+            filename: current.filename,
+            group: current.group,
+            score: score,
           });
-          if (!res.ok) {
-            const text = await res.text();
-            throw new Error("HTTP " + res.status + " " + text);
-          }
           currentIndex += 1;
           current = null;
           renderProgress();
@@ -348,6 +331,33 @@
         finishCard.classList.add("show");
         setStatus("");
         renderProgress();
+        submitSessionResults();
+      }
+
+      async function submitSessionResults() {
+        setBusy(true);
+        finishMessage.textContent = "Submitting your ratings...";
+        try {
+          const res = await fetch(SUBMIT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              session_id: sessionId,
+              items: results,
+            }),
+          });
+          if (!res.ok) {
+            const text = await res.text();
+            throw new Error("HTTP " + res.status + " " + text);
+          }
+          finishMessage.textContent = "Thanks for completing the listening test. Your ratings have been recorded.";
+        } catch (error) {
+          finishMessage.textContent =
+            "The test is complete, but saving failed. Please retry this session.";
+          setStatus("Failed to save session: " + error.message);
+        } finally {
+          setBusy(false);
+        }
       }
 
       ratingsEl.addEventListener("click", (event) => {
