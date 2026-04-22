@@ -2,9 +2,6 @@
   command = "hugo --gc --minify -b $URL"
   publish = "public"
 
-[functions]
-  directory = "netlify/functions"
-
 [build.environment]
   HUGO_VERSION = "0.123.3"
   HUGO_ENABLEGITINFO = "true"
@@ -22,18 +19,3 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
-
-[[redirects]]
-  from = "/mos-eval-ui/api/next"
-  to = "/.netlify/functions/mos-next"
-  status = 200
-
-[[redirects]]
-  from = "/mos-eval-ui/api/score"
-  to = "/.netlify/functions/mos-score"
-  status = 200
-
-[[redirects]]
-  from = "/mos-eval-ui/api/stats"
-  to = "/.netlify/functions/mos-stats"
-  status = 200

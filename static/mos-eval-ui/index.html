@@ -151,18 +151,66 @@
 
       <div class="card stats">
         <h3>Progress</h3>
-        <div id="statsBody">Total ratings submitted: <strong>0</strong></div>
+        <div id="statsBody">Ratings submitted in this browser session: <strong>0</strong></div>
       </div>
     </div>
 
+    <form
+      name="mos-eval-score"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="mos-eval-score" />
+      <input type="text" name="bot-field" />
+      <input type="hidden" name="id" />
+      <input type="hidden" name="filename" />
+      <input type="hidden" name="group" />
+      <input type="hidden" name="score" />
+      <input type="hidden" name="ts" />
+    </form>
+
     <script>
-      const API_BASE = "/mos-eval-ui/api";
+      const CLIPS = [
+        {
+          filename: "sample_clean_01.wav",
+          group: "clean",
+          url: "/mos-eval-ui/audio/clean/sample_clean_01.wav",
+        },
+        {
+          filename: "sample_clean_02.wav",
+          group: "clean",
+          url: "/mos-eval-ui/audio/clean/sample_clean_02.wav",
+        },
+        {
+          filename: "sample_clean_03.wav",
+          group: "clean",
+          url: "/mos-eval-ui/audio/clean/sample_clean_03.wav",
+        },
+        {
+          filename: "sample_poisoned_01.wav",
+          group: "poisoned",
+          url: "/mos-eval-ui/audio/poisoned/sample_poisoned_01.wav",
+        },
+        {
+          filename: "sample_poisoned_02.wav",
+          group: "poisoned",
+          url: "/mos-eval-ui/audio/poisoned/sample_poisoned_02.wav",
+        },
+        {
+          filename: "sample_poisoned_03.wav",
+          group: "poisoned",
+          url: "/mos-eval-ui/audio/poisoned/sample_poisoned_03.wav",
+        },
+      ];
       const player = document.getElementById("player");
       const clipMeta = document.getElementById("clipMeta");
       const ratingsEl = document.getElementById("ratings");
       const skipBtn = document.getElementById("skipBtn");
       const statusEl = document.getElementById("status");
       const statsBody = document.getElementById("statsBody");
+      const sessionKey = "mosEvalSubmittedCount";
 
       let current = null;
       let busy = false;
@@ -192,12 +240,18 @@
         setBusy(true);
         setStatus("Loading next clip...");
         try {
-          const res = await fetch(API_BASE + "/next", { cache: "no-store" });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const data = await res.json();
-          current = data;
-          player.src = data.url;
-          clipMeta.textContent = "Clip ID: " + data.id.slice(0, 8) + "...";
+          if (!CLIPS.length) {
+            throw new Error("No audio clips configured");
+          }
+          const clip = CLIPS[Math.floor(Math.random() * CLIPS.length)];
+          current = {
+            id: crypto.randomUUID(),
+            filename: clip.filename,
+            group: clip.group,
+            url: clip.url,
+          };
+          player.src = current.url;
+          clipMeta.textContent = "Clip ID: " + current.id.slice(0, 8) + "...";
           setStatus("");
         } catch (error) {
           clearCurrentClip("Unable to load a clip.");
@@ -212,22 +266,26 @@
         setBusy(true);
         setStatus("Submitting score " + score + "...");
         try {
-          const res = await fetch(API_BASE + "/score", {
+          const body = new URLSearchParams({
+            "form-name": "mos-eval-score",
+            id: current.id,
+            filename: current.filename,
+            group: current.group,
+            score: String(score),
+            ts: String(Date.now()),
+          }).toString();
+          const res = await fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              id: current.id,
-              filename: current.filename,
-              group: current.group,
-              score: score,
-            }),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body,
           });
           if (!res.ok) {
             const text = await res.text();
             throw new Error("HTTP " + res.status + " " + text);
           }
           current = null;
-          await refreshStats();
+          incrementSessionCount();
+          renderSessionCount();
           await fetchNext();
         } catch (error) {
           setStatus("Failed to submit: " + error.message);
@@ -235,16 +293,18 @@
         }
       }
 
-      async function refreshStats() {
-        try {
-          const res = await fetch(API_BASE + "/stats", { cache: "no-store" });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const stats = await res.json();
-          statsBody.innerHTML =
-            "Total ratings submitted: <strong>" + (stats.n || 0) + "</strong>";
-        } catch (error) {
-          statsBody.textContent = "Failed to load stats: " + error.message;
-        }
+      function getSessionCount() {
+        const value = Number(sessionStorage.getItem(sessionKey) || "0");
+        return Number.isFinite(value) ? value : 0;
+      }
+
+      function incrementSessionCount() {
+        sessionStorage.setItem(sessionKey, String(getSessionCount() + 1));
+      }
+
+      function renderSessionCount() {
+        statsBody.innerHTML =
+          "Ratings submitted in this browser session: <strong>" + getSessionCount() + "</strong>";
       }
 
       ratingsEl.addEventListener("click", (event) => {
@@ -268,7 +328,7 @@
         }
       });
 
-      refreshStats();
+      renderSessionCount();
       clearCurrentClip("Loading clip...");
       fetchNext();
     </script>
