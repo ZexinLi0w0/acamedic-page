@@ -91,17 +91,6 @@
         margin-top: 12px;
         flex-wrap: wrap;
       }
-      .skip {
-        appearance: none;
-        background: transparent;
-        border: 1px dashed var(--border);
-        color: var(--muted);
-        padding: 8px 14px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 0.85rem;
-      }
-      .skip:hover { color: var(--fg); border-color: var(--fg); }
       .stats {
         font-size: 0.9rem;
       }
@@ -116,6 +105,25 @@
         min-height: 1.2em;
         margin-top: 8px;
       }
+      .finish {
+        display: none;
+      }
+      .finish.show {
+        display: block;
+      }
+      .test-panel.hidden {
+        display: none;
+      }
+      .restart {
+        appearance: none;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: var(--accent-fg);
+        padding: 10px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
       @media (max-width: 540px) {
         .ratings { grid-template-columns: repeat(5, minmax(0, 1fr)); }
         .ratings button { font-size: 0.75rem; padding: 10px 4px; }
@@ -126,11 +134,11 @@
     <div class="wrap">
       <h1>Audio Naturalness MOS Evaluation</h1>
       <p class="lead">
-        Listen to the audio clip and rate how natural it sounds on a 1-5 scale.
-        Submit your rating to load the next clip.
+        Listen to each audio clip in order and rate how natural it sounds on a
+        1-5 scale. The test ends automatically after all clips are rated.
       </p>
 
-      <div class="card">
+      <div class="card test-panel" id="testPanel">
         <audio id="player" controls preload="auto"></audio>
         <div class="meta" id="clipMeta">Loading clip...</div>
 
@@ -142,16 +150,21 @@
           <button data-score="5">5 - Very Natural</button>
         </div>
 
-        <div class="row">
-          <button class="skip" id="skipBtn">Skip (load next without rating)</button>
-        </div>
-
         <div class="status" id="status"></div>
       </div>
 
       <div class="card stats">
         <h3>Progress</h3>
-        <div id="statsBody">Ratings submitted in this browser session: <strong>0</strong></div>
+        <div id="statsBody">Completed ratings: <strong>0 / 0</strong></div>
+      </div>
+
+      <div class="card finish" id="finishCard">
+        <h3>Finished</h3>
+        <p>Thanks for completing the listening test.</p>
+        <p>Your ratings have been recorded.</p>
+        <div class="row">
+          <button class="restart" id="restartBtn">Start a New Session</button>
+        </div>
       </div>
     </div>
 
@@ -207,13 +220,37 @@
       const player = document.getElementById("player");
       const clipMeta = document.getElementById("clipMeta");
       const ratingsEl = document.getElementById("ratings");
-      const skipBtn = document.getElementById("skipBtn");
       const statusEl = document.getElementById("status");
       const statsBody = document.getElementById("statsBody");
-      const sessionKey = "mosEvalSubmittedCount";
+      const testPanel = document.getElementById("testPanel");
+      const finishCard = document.getElementById("finishCard");
+      const restartBtn = document.getElementById("restartBtn");
 
       let current = null;
       let busy = false;
+      let clipQueue = [];
+      let currentIndex = 0;
+
+      function shuffledClips() {
+        const list = CLIPS.slice();
+        for (let i = list.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = list[i];
+          list[i] = list[j];
+          list[j] = temp;
+        }
+        return list;
+      }
+
+      function resetTestState() {
+        clipQueue = shuffledClips();
+        currentIndex = 0;
+        current = null;
+        setStatus("");
+        finishCard.classList.remove("show");
+        testPanel.classList.remove("hidden");
+        renderProgress();
+      }
 
       function clearCurrentClip(message) {
         current = null;
@@ -228,7 +265,6 @@
         for (const btn of ratingsEl.querySelectorAll("button")) {
           btn.disabled = value || !current;
         }
-        skipBtn.disabled = value;
       }
 
       function setStatus(message) {
@@ -240,10 +276,14 @@
         setBusy(true);
         setStatus("Loading next clip...");
         try {
-          if (!CLIPS.length) {
+          if (!clipQueue.length) {
             throw new Error("No audio clips configured");
           }
-          const clip = CLIPS[Math.floor(Math.random() * CLIPS.length)];
+          if (currentIndex >= clipQueue.length) {
+            showFinishState();
+            return;
+          }
+          const clip = clipQueue[currentIndex];
           current = {
             id: crypto.randomUUID(),
             filename: clip.filename,
@@ -251,7 +291,8 @@
             url: clip.url,
           };
           player.src = current.url;
-          clipMeta.textContent = "Clip ID: " + current.id.slice(0, 8) + "...";
+          clipMeta.textContent =
+            "Clip " + (currentIndex + 1) + " of " + clipQueue.length + " | ID: " + current.id.slice(0, 8) + "...";
           setStatus("");
         } catch (error) {
           clearCurrentClip("Unable to load a clip.");
@@ -283,9 +324,9 @@
             const text = await res.text();
             throw new Error("HTTP " + res.status + " " + text);
           }
+          currentIndex += 1;
           current = null;
-          incrementSessionCount();
-          renderSessionCount();
+          renderProgress();
           await fetchNext();
         } catch (error) {
           setStatus("Failed to submit: " + error.message);
@@ -293,18 +334,17 @@
         }
       }
 
-      function getSessionCount() {
-        const value = Number(sessionStorage.getItem(sessionKey) || "0");
-        return Number.isFinite(value) ? value : 0;
-      }
-
-      function incrementSessionCount() {
-        sessionStorage.setItem(sessionKey, String(getSessionCount() + 1));
-      }
-
-      function renderSessionCount() {
+      function renderProgress() {
         statsBody.innerHTML =
-          "Ratings submitted in this browser session: <strong>" + getSessionCount() + "</strong>";
+          "Completed ratings: <strong>" + currentIndex + " / " + clipQueue.length + "</strong>";
+      }
+
+      function showFinishState() {
+        clearCurrentClip("All clips completed.");
+        testPanel.classList.add("hidden");
+        finishCard.classList.add("show");
+        setStatus("");
+        renderProgress();
       }
 
       ratingsEl.addEventListener("click", (event) => {
@@ -315,20 +355,21 @@
         submitScore(score);
       });
 
-      skipBtn.addEventListener("click", () => {
-        if (!busy) fetchNext();
+      restartBtn.addEventListener("click", () => {
+        if (busy) return;
+        resetTestState();
+        clearCurrentClip("Loading clip...");
+        fetchNext();
       });
 
       window.addEventListener("keydown", (event) => {
         if (event.target && ["INPUT", "TEXTAREA"].includes(event.target.tagName)) return;
         if (event.key >= "1" && event.key <= "5") {
           submitScore(parseInt(event.key, 10));
-        } else if (event.key === "n" || event.key === "N") {
-          if (!busy) fetchNext();
         }
       });
 
-      renderSessionCount();
+      resetTestState();
       clearCurrentClip("Loading clip...");
       fetchNext();
     </script>
