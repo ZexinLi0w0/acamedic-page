@@ -170,7 +170,9 @@
 
     <form
       name="mos-eval-score"
+      id="scoreForm"
       method="POST"
+      action="/mos-eval-ui/"
       data-netlify="true"
       netlify-honeypot="bot-field"
       hidden
@@ -225,6 +227,7 @@
       const testPanel = document.getElementById("testPanel");
       const finishCard = document.getElementById("finishCard");
       const restartBtn = document.getElementById("restartBtn");
+      const scoreForm = document.getElementById("scoreForm");
 
       let current = null;
       let busy = false;
@@ -307,15 +310,15 @@
         setBusy(true);
         setStatus("Submitting score " + score + "...");
         try {
-          const body = new URLSearchParams({
-            "form-name": "mos-eval-score",
-            id: current.id,
-            filename: current.filename,
-            group: current.group,
-            score: String(score),
-            ts: String(Date.now()),
-          }).toString();
-          const res = await fetch("/", {
+          scoreForm.elements.id.value = current.id;
+          scoreForm.elements.filename.value = current.filename;
+          scoreForm.elements.group.value = current.group;
+          scoreForm.elements.score.value = String(score);
+          scoreForm.elements.ts.value = String(Date.now());
+
+          const formData = new FormData(scoreForm);
+          const body = new URLSearchParams(formData).toString();
+          const res = await fetch(scoreForm.action, {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body,
