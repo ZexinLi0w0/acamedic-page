@@ -21,9 +21,17 @@ export default async function handler(request) {
     return jsonResponse({ detail: "forbidden" }, { status: 403 });
   }
 
-  const result = await sessionsStore().deleteAll();
+  const store = sessionsStore();
+  const { blobs } = await store.list();
+  let deleted = 0;
+
+  for (const blob of blobs) {
+    await store.delete(blob.key);
+    deleted += 1;
+  }
+
   return jsonResponse({
     status: "ok",
-    deleted_sessions: result.deletedBlobs,
+    deleted_sessions: deleted,
   });
 }
