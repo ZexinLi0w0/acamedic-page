@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audio Naturalness MOS Evaluation</title>
+    <style>
+      :root {
+        --bg: #fafafa;
+        --fg: #1a1a1a;
+        --muted: #6b6b6b;
+        --card: #ffffff;
+        --border: #e5e5e5;
+        --accent: #2563eb;
+        --accent-fg: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.45;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 24px 16px 64px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 12px;
+      }
+      p.lead {
+        margin: 0 0 20px;
+        color: var(--muted);
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 16px;
+      }
+      audio {
+        width: 100%;
+        margin-top: 4px;
+      }
+      .meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .ratings {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .ratings button {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--fg);
+        padding: 12px 6px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        text-align: center;
+        transition: background 0.15s, color 0.15s, border-color 0.15s;
+      }
+      .ratings button:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .ratings button:active,
+      .ratings button.active {
+        background: var(--accent);
+        color: var(--accent-fg);
+        border-color: var(--accent);
+      }
+      .ratings button[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 12px;
+        flex-wrap: wrap;
+      }
+      .skip {
+        appearance: none;
+        background: transparent;
+        border: 1px dashed var(--border);
+        color: var(--muted);
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+      .skip:hover { color: var(--fg); border-color: var(--fg); }
+      .stats {
+        font-size: 0.9rem;
+      }
+      .stats h3 {
+        font-size: 1rem;
+        margin: 0 0 8px;
+      }
+      .stats strong { font-variant-numeric: tabular-nums; }
+      .status {
+        font-size: 0.85rem;
+        color: var(--muted);
+        min-height: 1.2em;
+        margin-top: 8px;
+      }
+      @media (max-width: 540px) {
+        .ratings { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        .ratings button { font-size: 0.75rem; padding: 10px 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Audio Naturalness MOS Evaluation</h1>
+      <p class="lead">
+        Listen to the audio clip and rate how natural it sounds on a 1-5 scale.
+        Submit your rating to load the next clip.
+      </p>
+
+      <div class="card">
+        <audio id="player" controls preload="auto"></audio>
+        <div class="meta" id="clipMeta">Loading clip...</div>
+
+        <div class="ratings" id="ratings">
+          <button data-score="1">1 - Very Unnatural</button>
+          <button data-score="2">2 - Unnatural</button>
+          <button data-score="3">3 - Neutral</button>
+          <button data-score="4">4 - Natural</button>
+          <button data-score="5">5 - Very Natural</button>
+        </div>
+
+        <div class="row">
+          <button class="skip" id="skipBtn">Skip (load next without rating)</button>
+        </div>
+
+        <div class="status" id="status"></div>
+      </div>
+
+      <div class="card stats">
+        <h3>Progress</h3>
+        <div id="statsBody">Total ratings submitted: <strong>0</strong></div>
+      </div>
+    </div>
+
+    <script>
+      const API_BASE = "/mos-eval-ui/api";
+      const player = document.getElementById("player");
+      const clipMeta = document.getElementById("clipMeta");
+      const ratingsEl = document.getElementById("ratings");
+      const skipBtn = document.getElementById("skipBtn");
+      const statusEl = document.getElementById("status");
+      const statsBody = document.getElementById("statsBody");
+
+      let current = null;
+      let busy = false;
+
+      function clearCurrentClip(message) {
+        current = null;
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+        clipMeta.textContent = message || "No clip loaded.";
+      }
+
+      function setBusy(value) {
+        busy = value;
+        for (const btn of ratingsEl.querySelectorAll("button")) {
+          btn.disabled = value || !current;
+        }
+        skipBtn.disabled = value;
+      }
+
+      function setStatus(message) {
+        statusEl.textContent = message || "";
+      }
+
+      async function fetchNext() {
+        clearCurrentClip("Loading clip...");
+        setBusy(true);
+        setStatus("Loading next clip...");
+        try {
+          const res = await fetch(API_BASE + "/next", { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const data = await res.json();
+          current = data;
+          player.src = data.url;
+          clipMeta.textContent = "Clip ID: " + data.id.slice(0, 8) + "...";
+          setStatus("");
+        } catch (error) {
+          clearCurrentClip("Unable to load a clip.");
+          setStatus("Failed to load next clip: " + error.message);
+        } finally {
+          setBusy(false);
+        }
+      }
+
+      async function submitScore(score) {
+        if (!current || busy) return;
+        setBusy(true);
+        setStatus("Submitting score " + score + "...");
+        try {
+          const res = await fetch(API_BASE + "/score", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              id: current.id,
+              filename: current.filename,
+              group: current.group,
+              score: score,
+            }),
+          });
+          if (!res.ok) {
+            const text = await res.text();
+            throw new Error("HTTP " + res.status + " " + text);
+          }
+          current = null;
+          await refreshStats();
+          await fetchNext();
+        } catch (error) {
+          setStatus("Failed to submit: " + error.message);
+          setBusy(false);
+        }
+      }
+
+      async function refreshStats() {
+        try {
+          const res = await fetch(API_BASE + "/stats", { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const stats = await res.json();
+          statsBody.innerHTML =
+            "Total ratings submitted: <strong>" + (stats.n || 0) + "</strong>";
+        } catch (error) {
+          statsBody.textContent = "Failed to load stats: " + error.message;
+        }
+      }
+
+      ratingsEl.addEventListener("click", (event) => {
+        const btn = event.target.closest("button[data-score]");
+        if (!btn) return;
+        const score = parseInt(btn.getAttribute("data-score"), 10);
+        if (!Number.isFinite(score)) return;
+        submitScore(score);
+      });
+
+      skipBtn.addEventListener("click", () => {
+        if (!busy) fetchNext();
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.target && ["INPUT", "TEXTAREA"].includes(event.target.tagName)) return;
+        if (event.key >= "1" && event.key <= "5") {
+          submitScore(parseInt(event.key, 10));
+        } else if (event.key === "n" || event.key === "N") {
+          if (!busy) fetchNext();
+        }
+      });
+
+      refreshStats();
+      clearCurrentClip("Loading clip...");
+      fetchNext();
+    </script>
+  </body>
+</html>
