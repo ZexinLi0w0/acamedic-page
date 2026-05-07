@@ -265,6 +265,45 @@
   .pub-entry__meta { padding-top: 0; }
 }
 
+/* ---------- News section: align with Publications style ---------- */
+
+#news .universal-wrapper {
+  max-width: 880px;
+}
+
+#news .row .col-md-12,
+#news .row .col-md-9,
+#news .row .col-md-3,
+#news .row > [class*='col-'] {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#news h1.section-heading,
+#news .section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.25rem;
+  text-align: left;
+}
+
+#news .section-subheading { display: none; }
+
+#news .article-style,
+#news .article-content {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #333;
+
+  p { margin: 0 0 0.25rem; }
+  br { display: block; margin: 0; content: ""; }
+  a { color: #1463a3; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+}
+
 /* Hide the old Wowchemy publication "search/filter" controls if they appear
    on the section page — keep clean look. */
 .universal-wrapper .form-row.mb-4 {

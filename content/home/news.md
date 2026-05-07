@@ -8,7 +8,7 @@ title: News
 subtitle:
 
 design:
-  columns: '2'
+  columns: '1'
 ---
 04/2026 - Two papers are accepted by {{< staticref "https://2026.aclweb.org/" "newtab" >}}ACL'26{{< /staticref >}}.<br>
 03/2026 - One paper is accepted by {{< staticref "https://jmlr.org/tmlr/" "newtab" >}}TMLR{{< /staticref >}}.<br>
