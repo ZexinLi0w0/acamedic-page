@@ -281,8 +281,12 @@
   padding-right: 0;
 }
 
-#news h1.section-heading,
 #news .section-heading {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+#news .section-heading h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
