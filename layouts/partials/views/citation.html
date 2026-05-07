@@ -1,0 +1,50 @@
+{{/* Override: minimal flat publication entry (Junfeng-style) */}}
+{{ $item := .item }}
+
+{{/* Resolve PDF link: bundled PDF or url_pdf */}}
+{{ $pdf := "" }}
+{{ $resource := $item.Resources.GetMatch (printf "%s.pdf" $item.File.ContentBaseName) }}
+{{ with $resource }}
+  {{ $pdf = .RelPermalink }}
+{{ else }}
+  {{ with $item.Params.url_pdf }}{{ $pdf = . }}{{ end }}
+{{ end }}
+
+{{/* Venue tag — prefer publication_short, fallback to publication */}}
+{{ $venue := "" }}
+{{ if $item.Params.publication_short }}
+  {{ $venue = $item.Params.publication_short }}
+{{ else if $item.Params.publication }}
+  {{ $venue = $item.Params.publication }}
+{{ end }}
+
+<div class="pub-entry">
+  <div class="pub-entry__main">
+    <div class="pub-entry__title">
+      <a href="{{ if $pdf }}{{ $pdf }}{{ else }}{{ $item.RelPermalink }}{{ end }}"{{ if $pdf }} target="_blank" rel="noopener"{{ end }}>{{ $item.Title }}</a>
+    </div>
+    <div class="pub-entry__authors">
+      {{ $authors_html := partial "page_metadata_authors" $item }}
+      {{ $highlight_names := slice "Zexin Li" }}
+      {{ range $highlight_names }}
+        {{ $authors_html = replace $authors_html . (printf "<strong class=\"me-author\">%s</strong>" .) }}
+      {{ end }}
+      {{ $authors_html | safeHTML }}
+    </div>
+    {{ with $venue }}
+      <div class="pub-entry__venue-mobile">
+        <span class="pub-venue">{{ . | markdownify }}</span>
+      </div>
+    {{ end }}
+  </div>
+  <div class="pub-entry__meta">
+    {{ with $venue }}<span class="pub-venue">{{ . | markdownify }}</span>{{ end }}
+    {{ if $pdf }}
+      <a class="pub-pdf" href="{{ $pdf }}" target="_blank" rel="noopener">[PDF]</a>
+    {{ end }}
+    {{ $cite := $item.Resources.GetMatch "cite.bib" }}
+    {{ with $cite }}
+      <a class="pub-cite js-cite-modal" href="#" data-filename="{{ .RelPermalink }}">[BibTeX]</a>
+    {{ end }}
+  </div>
+</div>
