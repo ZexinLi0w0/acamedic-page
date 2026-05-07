@@ -13,3 +13,7 @@ go.sum
 .hugo_build.lock
 
 */.DS_Store
+
+# Hugo modules vendor cache
+_vendor/
+.vscode/
