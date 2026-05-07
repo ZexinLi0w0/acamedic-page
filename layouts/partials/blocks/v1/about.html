@@ -1,0 +1,94 @@
+{{/* Override: minimal academic hero (Junfeng-style) */}}
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $author := "" }}
+{{ if .author }}
+  {{ $author = .author }}
+{{ else }}
+  {{ $author = $block.Params.author }}
+{{ end }}
+
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page." $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+
+<!-- About widget (custom) -->
+<div class="about-hero">
+  <div class="about-hero__photo">
+    {{ if site.Params.features.avatar.gravatar }}
+      <img class="about-avatar" src="https://s.gravatar.com/avatar/{{ md5 $person.email }}?s=360" alt="{{ $person_page.Title }}">
+    {{ else if $avatar }}
+      {{ $avatar_image := $avatar.Fill "360x360 Center" }}
+      <img class="about-avatar"
+           width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
+           src="{{ $avatar_image.RelPermalink }}" alt="{{ $person_page.Title }}">
+    {{ end }}
+  </div>
+
+  <div class="about-hero__body">
+
+    <h1 class="about-name">
+      {{- if $person.name_pronunciation -}}
+        <ruby><rb>{{ $person_page.Title }}</rb><rt>{{ $person.name_pronunciation }}</rt></ruby>
+      {{- else -}}
+        {{- $person_page.Title -}}
+      {{- end -}}
+    </h1>
+
+    {{ with $person.role }}<p class="about-role">{{ . | markdownify | emojify }}</p>{{ end }}
+
+    {{ range $person.organizations }}
+      <p class="about-affiliation">
+        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}
+      </p>
+    {{ end }}
+
+    {{ with $person_page.Content }}
+      <div class="about-bio">{{ . }}</div>
+    {{ end }}
+
+    {{ with $person.social }}
+    <ul class="about-social" aria-hidden="true">
+      {{ range . }}
+        {{ $pack := or .icon_pack "fas" }}
+        {{ $pack_prefix := $pack }}
+        {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+          {{ $pack_prefix = "fa" }}
+        {{ end }}
+        {{ $link := .link }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}
+          {{ $link = .link | relLangURL }}
+        {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+        {{ end }}
+        {{ $label := .icon }}
+        {{ if eq .icon "envelope" }}{{ $label = "Email" }}
+        {{ else if eq .icon "google-scholar" }}{{ $label = "Scholar" }}
+        {{ else if eq .icon "researchgate" }}{{ $label = "ResearchGate" }}
+        {{ else if eq .icon "linkedin" }}{{ $label = "LinkedIn" }}
+        {{ else if eq .icon "twitter" }}{{ $label = "Twitter" }}
+        {{ else if eq .icon "github" }}{{ $label = "GitHub" }}
+        {{ else if eq .icon "dblp" }}{{ $label = "DBLP" }}
+        {{ else if eq .icon "blog" }}{{ $label = "Blog" }}
+        {{ else if eq .icon "cv" }}{{ $label = "CV" }}
+        {{ end }}
+        <li>
+          <a class="about-social__btn" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $label }}">
+            <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }}"></i>
+            <span>{{ $label }}</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+  </div>
+</div>
