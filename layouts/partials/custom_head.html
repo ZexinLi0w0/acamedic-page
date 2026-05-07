@@ -1,0 +1,7 @@
+{{/* Inject custom site CSS */}}
+{{ $custom := resources.Get "scss/custom.scss" }}
+{{ if $custom }}
+  {{ $opts := dict "outputStyle" "compressed" "enableSourceMap" false }}
+  {{ $css := $custom | toCSS $opts | fingerprint "md5" }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ end }}

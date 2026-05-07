@@ -1,0 +1,283 @@
+/* ==========================================================================
+   Custom restyle: minimal academic homepage (Junfeng-style)
+   ========================================================================== */
+
+/* Reset Wowchemy's default vertical padding on widget sections to keep the
+   page tight. */
+.universal-wrapper {
+  max-width: 880px;
+}
+
+#about,
+#publications,
+#service,
+#contact {
+  padding-top: 1.75rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+#about > .universal-wrapper > h1,
+#publications > .universal-wrapper > h1,
+#service > .universal-wrapper > h1 {
+  margin-top: 0;
+}
+
+/* ---------- Hero ---------- */
+
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0.5rem 0 1rem;
+}
+
+.about-hero__photo {
+  flex: 0 0 auto;
+}
+
+.about-avatar {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px; /* near-square with subtle rounding */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero__body {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.about-name {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  line-height: 1.15;
+}
+
+.about-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0 0 0.15rem;
+}
+
+.about-affiliation {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 0.6rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+
+    &:hover {
+      color: #1463a3;
+      border-bottom-color: #1463a3;
+    }
+  }
+}
+
+.about-bio {
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: #333;
+  margin-top: 0.55rem;
+
+  p {
+    margin: 0 0 0.7rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- Pill social buttons ---------- */
+
+.about-social {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.about-social__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.75rem;
+  background: #f1f1f3;
+  color: #333 !important;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  line-height: 1.2;
+
+  i {
+    font-size: 0.92rem;
+  }
+
+  &:hover {
+    background: #e3e7ef;
+    color: #1463a3 !important;
+    border-color: #c8d2e0;
+  }
+}
+
+/* ---------- Optional notice / banner ---------- */
+
+.notice-banner {
+  background: #fff8d6;
+  border: 1px solid #f1e2a4;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0 1.25rem;
+  font-size: 0.95rem;
+  color: #5a4a00;
+}
+
+/* Highlight any "on the job market" line that's already in the bio. */
+.about-bio strong { color: #b00020; }
+
+/* ---------- Publications: year-grouped flat list ---------- */
+
+.pubs-wrapper {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+.pubs-year {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.6rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e5e5e5;
+  color: #222;
+}
+
+.pubs-year-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pub-entry {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed #ececec;
+
+  &:last-child { border-bottom: none; }
+}
+
+.pub-entry__main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-entry__title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+
+  a {
+    color: #1f3a68;
+    text-decoration: none;
+
+    &:hover {
+      color: #1463a3;
+      text-decoration: underline;
+    }
+  }
+}
+
+.pub-entry__authors {
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 0.15rem;
+  line-height: 1.4;
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #1463a3; }
+
+  .author-highlighted,
+  .me-author {
+    font-weight: 700;
+    color: #222;
+  }
+}
+
+.pub-entry__meta {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+  padding-top: 0.1rem;
+}
+
+.pub-venue {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b22222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  em, i { font-style: normal; }
+}
+
+.pub-pdf,
+.pub-cite {
+  font-size: 0.82rem;
+  color: #1463a3;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* Mobile: move venue under title, hide right-side venue */
+.pub-entry__venue-mobile { display: none; }
+
+@media (max-width: 640px) {
+  .about-hero { gap: 1rem; }
+  .about-avatar { width: 150px; height: 150px; }
+  .about-name { font-size: 1.5rem; }
+
+  .pub-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .pub-entry__meta .pub-venue { display: none; }
+  .pub-entry__venue-mobile { display: block; margin-top: 0.2rem; }
+  .pub-entry__meta { padding-top: 0; }
+}
+
+/* Hide the old Wowchemy publication "search/filter" controls if they appear
+   on the section page — keep clean look. */
+.universal-wrapper .form-row.mb-4 {
+  display: none;
+}
+
+/* Tone down the Wowchemy section heading and remove the giant default top
+   padding inside widgets. */
+.home-section {
+  padding: 1.75rem 0 !important;
+}
+
+/* Remove the "see all" caret if appearing inside our flat list */
+.pubs-wrapper .see-all {
+  margin-top: 1rem;
+}
