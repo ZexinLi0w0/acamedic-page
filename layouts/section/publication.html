@@ -1,0 +1,30 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12 pubs-wrapper">
+
+      {{ with .Content }}
+      <div class="article-style">{{ . }}</div>
+      {{ end }}
+
+      {{ $current_year := "" }}
+      {{ range $index, $item := .Pages.ByDate.Reverse }}
+        {{ $year := $item.Date.Format "2006" }}
+        {{ if ne $year $current_year }}
+          {{ if ne $current_year "" }}</div>{{ end }}
+          <h2 class="pubs-year">{{ $year }}</h2>
+          <div class="pubs-year-list">
+          {{ $current_year = $year }}
+        {{ end }}
+        {{ partial "views/citation" (dict "page" $ "item" $item "index" $index) }}
+      {{ end }}
+      {{ if ne $current_year "" }}</div>{{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{- end -}}
