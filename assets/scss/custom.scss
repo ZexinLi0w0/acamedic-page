@@ -2,6 +2,36 @@
    Custom restyle: minimal academic homepage (Junfeng-style)
    ========================================================================== */
 
+/* ---------- Force white background everywhere (no dark mode) ---------- */
+html,
+html.dark,
+html[data-bs-theme="dark"],
+body,
+body.dark,
+.dark body,
+.home-section,
+.home-section-bg,
+section,
+.universal-wrapper,
+.container,
+footer,
+.site-footer,
+nav,
+.navbar {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #222 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body, .home-section, .home-section-bg, section,
+  .universal-wrapper, .container, footer, .site-footer {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #222 !important;
+  }
+}
+
 /* Reset Wowchemy's default vertical padding on widget sections to keep the
    page tight. */
 .universal-wrapper {
