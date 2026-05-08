@@ -1,5 +1,5 @@
 ---
-title: "🌟 LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems (Outstanding Paper Award)"
+title: "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -28,8 +28,8 @@ publishDate: "2024-07-20T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *46th IEEE Real-Time Systems Symposium*
-publication_short: In *RTSS'25*
+publication: "In *46th IEEE Real-Time Systems Symposium* 🌟 Outstanding Paper Award"
+publication_short: "In *RTSS'25* 🌟 Outstanding Paper Award"
 
 abstract: "To appear soon."
   
