@@ -281,17 +281,45 @@
   padding-right: 0;
 }
 
-#news .section-heading {
+/* Unify News + Publications section headings: full-width, left-aligned,
+   identical typography. */
+#news .section-heading,
+#publications .section-heading {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
   text-align: left !important;
   align-items: flex-start !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-#news .section-heading h1 {
-  font-size: 2rem;
+#news .section-heading h1,
+#publications .section-heading h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.25rem;
-  text-align: left;
+  letter-spacing: -0.005em;
+  color: #222;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left !important;
+  width: 100%;
+}
+
+/* Force every text node inside News + Publications to align left. */
+#news,
+#news .row,
+#news .col-12,
+#news p,
+#news .article-style,
+#publications,
+#publications .row,
+#publications .pubs-wrapper,
+#publications .pub-entry,
+#publications .pub-entry__main {
+  text-align: left !important;
 }
 
 #news .section-subheading { display: none; }

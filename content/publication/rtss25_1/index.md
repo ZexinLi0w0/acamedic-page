@@ -1,5 +1,5 @@
 ---
-title: "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems"
+title: "🌟 LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems (Outstanding Paper Award)"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
