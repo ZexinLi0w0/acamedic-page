@@ -1,5 +1,5 @@
 ---
-title: "PIMbot: Policy and Incentive Manipulation for Multi-Robot Reinforcement Learning in Social Dilemmas"
+title: "PIMbot: A Self-Adaptive Attack Framework for Adversarial Manipulation of Multi-Robot Reinforcement Learning"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
