@@ -1,5 +1,5 @@
 ---
-title: "RED: A Systematic Real-Time Scheduling Approach for Robotic Environmental Dynamics"
+title: "RED: Adaptive Real-Time DAG Scheduling for Robotic Inference under Environmental Dynamics"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -29,8 +29,8 @@ publishDate: "2025-02-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Submission to TCPS*
-publication_short: In *Submission to TCPS*
+publication: In *Submission to TECS*
+publication_short: In *Submission to TECS*
 
 abstract: "To appear."
   
