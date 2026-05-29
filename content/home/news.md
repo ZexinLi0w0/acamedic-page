@@ -10,6 +10,7 @@ subtitle:
 design:
   columns: '1'
 ---
+05/2026 - I'm excited to share that I've successfully defended my Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}University of California, Riverside{{< /staticref >}}, with my dissertation "Towards Deployable On-Device Machine Learning Systems". Committee members: Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}, Dr. Hyoseung Kim, and Dr. Jun Sheng.<br>
 04/2026 - Two papers are accepted by {{< staticref "https://2026.aclweb.org/" "newtab" >}}ACL'26{{< /staticref >}}.<br>
 03/2026 - One paper is accepted by {{< staticref "https://jmlr.org/tmlr/" "newtab" >}}TMLR{{< /staticref >}}.<br>
 12/2025 - Our RTSS'25 paper received <span style="color: red;">Outstanding Paper Award</span>.<br>
