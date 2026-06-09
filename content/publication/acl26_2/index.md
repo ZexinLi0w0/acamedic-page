@@ -32,7 +32,7 @@ publication_types: ["1"]
 publication: In *ACL'26*
 publication_short: In *ACL'26*
 
-abstract: "LLM serving is limited by provider-side resources: longer generations consume more GPU time, increase latency, and reduce throughput in multi-tenant systems. This creates a denial-of-service (DoS) risk, where attackers degrade service by inducing excessive generation. Prior work on LLM DoS primarily relies on adversarial perturbations that delay end-of-sequence termination. We show perturbations are often unnecessary: natural, benign-looking instructions that specify impractical and meaningless tasks can already trigger excessive generation. To study this overlooked vulnerability, we introduce NaturalSloth, a benchmarking dataset of natural, instruction-based DoS prompts. Starting from a human-curated seed set spanning diverse attack categories, we design a multi-agent synthesis framework to scale the dataset while preserving malicious intent and increasing semantic diversity. Experiments across a wide range of proprietary and open-source LLMs show that NaturalSloth consistently induces excessive generation, with attack effectiveness further amplified when combined with jailbreak techniques. Our analysis also reveals significant limitations of existing defenses, highlighting the need for dedicated protections against natural DoS attacks."
+abstract: ""
   
 # Summary. An optional shortened abstract.
 summary:
