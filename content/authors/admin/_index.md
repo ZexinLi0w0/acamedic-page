@@ -84,6 +84,6 @@ I am actively looking for cooperation in the following topics: (1) deploying mac
 
 <span style="color: red;"><strong>I am on job market now!</strong></span> I am currently on the 2025-2026 job market and open to opportunities in real-time embedded systems, on-device machine learning, cyber-physical systems, AI/ML, and embedded intelligent systems research. I welcome conversations with teams working on cutting-edge machine learning systems and embedded intelligent systems workflows. Feel free to reach out at 📧 zli536@ucr.edu if you believe there might be a fit.
 
-<strong>Feel free to contact me if we share common research interests.</strong>
+<span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}Curriculum Vitae{{< /staticref >}}.

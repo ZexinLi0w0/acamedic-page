@@ -74,6 +74,15 @@ nav,
     color: #0d4d82 !important;
   }
   .pub-venue { color: #b22222 !important; }
+
+  /* Preserve intentional inline-red emphasis (e.g. job-market lines) — don't
+     let the dark-text override wash them out. */
+  span[style*="color: red"],
+  span[style*="color:red"],
+  span[style*="color: red"] strong,
+  span[style*="color:red"] strong {
+    color: #e53935 !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
