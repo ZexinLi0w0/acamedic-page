@@ -32,6 +32,59 @@ nav,
   }
 }
 
+/* ---------- Dark-mode text fix ----------
+   The site forces a white background everywhere, but the `minimal` theme's
+   dark variant (_dark.scss / theme [dark] block) sets headings, names, years
+   and links to near-white colors. On our forced-white background those become
+   invisible. Re-assert dark text + readable link colors whenever the OS / theme
+   requests dark mode. */
+@mixin force-dark-text {
+  h1, h2, h3, h4, h5, h6,
+  p, span, li, strong, em, small, time,
+  .about-name, .about-role, .about-affiliation, .about-bio,
+  .pubs-year, .pub-entry__title, .pub-entry__authors,
+  .section-heading h1,
+  #news .article-style, #news .article-content {
+    color: #222 !important;
+  }
+
+  .about-name, .pubs-year,
+  #news .section-heading h1, #publications .section-heading h1 {
+    color: #1a1a1a !important;
+  }
+
+  /* Authors: keep secondary grey, but highlighted (me) author stays dark. */
+  .pub-entry__authors { color: #555 !important; }
+  .pub-entry__authors .author-highlighted,
+  .pub-entry__authors .me-author { color: #222 !important; }
+  .about-role { color: #444 !important; }
+  .about-affiliation { color: #666 !important; }
+
+  /* Links: darken so they aren't washed-out pale blue at night. */
+  a,
+  .pub-entry__title a,
+  .pub-pdf, .pub-cite,
+  #news a {
+    color: #1463a3 !important;
+  }
+  a:hover,
+  .pub-entry__title a:hover,
+  .pub-pdf:hover, .pub-cite:hover,
+  #news a:hover {
+    color: #0d4d82 !important;
+  }
+  .pub-venue { color: #b22222 !important; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { @include force-dark-text; }
+}
+html.dark,
+html[data-bs-theme="dark"],
+.dark body {
+  @include force-dark-text;
+}
+
 /* Reset Wowchemy's default vertical padding on widget sections to keep the
    page tight. */
 .universal-wrapper {
