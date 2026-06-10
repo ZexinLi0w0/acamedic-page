@@ -329,6 +329,12 @@ html[data-bs-theme="dark"],
   em, i { font-style: normal; }
 }
 
+/* The leading "In" kept for "In Submission to TECS" venues stays black
+   (not red). */
+.pub-venue__in {
+  color: #222 !important;
+}
+
 .pub-pdf,
 .pub-cite {
   font-size: 0.82rem;

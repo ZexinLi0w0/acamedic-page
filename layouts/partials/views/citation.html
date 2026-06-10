@@ -18,6 +18,23 @@
   {{ $venue = $item.Params.publication }}
 {{ end }}
 
+{{/* Venue "In" handling:
+     - Keep the leading "In" only for "In Submission ..." venues, and render
+       that "In" in black (the rest stays red via .pub-venue).
+     - For all other venues, drop the leading "In " prefix entirely. */}}
+{{ $venue_html := "" }}
+{{ with $venue }}
+  {{ $v := . | markdownify }}
+  {{/* Detect "Submission" anywhere in the (possibly tag-wrapped) venue. */}}
+  {{ if (findRE `(?i)Submission` $v) }}
+    {{/* Keep leading "In" but recolor it black; strip just the leading word. */}}
+    {{ $rest := replaceRE `(?i)^(<[^>]+>)?\s*In\s+` "" $v }}
+    {{ $venue_html = printf `<span class="pub-venue__in">In</span> %s` $rest }}
+  {{ else }}
+    {{ $venue_html = replaceRE `(?i)^(<[^>]+>)?\s*In\s+` "" $v }}
+  {{ end }}
+{{ end }}
+
 <div class="pub-entry">
   <div class="pub-entry__main">
     <div class="pub-entry__title">
@@ -31,14 +48,14 @@
       {{ end }}
       {{ $authors_html | safeHTML }}
     </div>
-    {{ with $venue }}
+    {{ with $venue_html }}
       <div class="pub-entry__venue-mobile">
-        <span class="pub-venue">{{ . | markdownify }}</span>
+        <span class="pub-venue">{{ . | safeHTML }}</span>
       </div>
     {{ end }}
   </div>
   <div class="pub-entry__meta">
-    {{ with $venue }}<span class="pub-venue">{{ . | markdownify }}</span>{{ end }}
+    {{ with $venue_html }}<span class="pub-venue">{{ . | safeHTML }}</span>{{ end }}
     {{ if $pdf }}
       <a class="pub-pdf" href="{{ $pdf }}" target="_blank" rel="noopener">[PDF]</a>
     {{ end }}
