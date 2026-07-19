@@ -1,7 +1,6 @@
 ---
-# Selected publications on the homepage: all RTSS papers + Mixtraining (TMLR).
-# Selection is controlled by `featured: true` in each publication's front matter.
-# The full list is archived (unlinked) at /pub/.
+# An instance of the Pages widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
 active: true
 widget: pages
 
@@ -11,7 +10,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 30
 
-title: Selected Publications
+title: Publications
 subtitle: ''
 
 content:
@@ -23,7 +22,6 @@ content:
     category: ''
     publication_type: ''
     author: ''
-    featured_only: true
     exclude_featured: false
     exclude_future: false
     exclude_past: false
@@ -34,7 +32,7 @@ content:
   # Page order: descending (desc) or ascending (asc) date.
   order: desc
 design:
-  # compact view: title + authors + links, no year shown.
-  view: compact
+  # Choose a view for the listings:
+  view: citation
   columns: '2'
 ---
