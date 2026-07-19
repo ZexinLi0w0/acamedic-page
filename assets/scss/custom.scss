@@ -455,3 +455,11 @@ html[data-bs-theme="dark"],
 .pubs-wrapper .see-all {
   margin-top: 1rem;
 }
+
+/* Clickable venue abbreviations keep the venue tag color */
+.pub-venue a.pub-venue-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}

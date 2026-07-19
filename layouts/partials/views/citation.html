@@ -35,6 +35,15 @@
   {{ end }}
 {{ end }}
 
+{{/* Linkify venue abbreviations using data/venue_links.yaml */}}
+{{ if $venue_html }}
+  {{ range site.Data.venue_links }}
+    {{ if in $venue_html .abbr }}
+      {{ $venue_html = replace $venue_html .abbr (printf `<a class="pub-venue-link" href="%s" target="_blank" rel="noopener">%s</a>` .url .abbr) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 <div class="pub-entry">
   <div class="pub-entry__main">
     <div class="pub-entry__title">

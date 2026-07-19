@@ -1,0 +1,36 @@
+# Venue abbreviation -> official site, used by layouts/partials/views/citation.html
+# Matched as substrings of the rendered venue tag; list order = replacement order.
+- abbr: "RTSS'23"
+  url: https://2023.rtss.org/
+- abbr: "RTSS'24"
+  url: https://2024.rtss.org/
+- abbr: "RTSS'25"
+  url: https://2025.rtss.org/
+- abbr: "CVPR'23"
+  url: https://cvpr2023.thecvf.com/
+- abbr: "ECCV'26"
+  url: https://eccv2026.ecva.net/
+- abbr: "ACL'23"
+  url: https://2023.aclweb.org/
+- abbr: "ACL'26"
+  url: https://2026.aclweb.org/
+- abbr: "EMNLP'25"
+  url: https://2025.emnlp.org/
+- abbr: "AAAI'26"
+  url: https://aaai.org/conference/aaai/aaai-26/
+- abbr: "FSE'24"
+  url: https://conf.researchr.org/home/fse-2024
+- abbr: "IROS'23"
+  url: https://ieee-iros.org/
+- abbr: "TMLR"
+  url: https://jmlr.org/tmlr/
+- abbr: "JSA"
+  url: https://www.sciencedirect.com/journal/journal-of-systems-architecture
+- abbr: "IEEE SPL"
+  url: https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters
+- abbr: "TECS"
+  url: https://dl.acm.org/journal/tecs
+- abbr: "TC"
+  url: https://www.computer.org/csdl/journal/tc
+- abbr: "Arxiv"
+  url: https://arxiv.org/
