@@ -34,7 +34,9 @@ content:
   # Page order: descending (desc) or ascending (asc) date.
   order: desc
 design:
-  # citation view: same custom pub-entry style as the full list at /pub/.
+  # citation view: same custom pub-entry style as the full list at /pub/,
+  # but without the year headings.
   view: citation
+  group_by_year: false
   columns: '2'
 ---

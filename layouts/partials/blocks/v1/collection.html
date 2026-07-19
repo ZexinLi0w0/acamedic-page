@@ -80,19 +80,28 @@
   {{ with $block.Params.content.text }}{{ . | emojify | $page.RenderString }}{{ end }}
 
   {{ if $is_citation }}
-    {{/* Year-grouped flat list */}}
-    {{ $current_year := "" }}
-    {{ range $index, $item := $query }}
-      {{ $year := $item.Date.Format "2006" }}
-      {{ if ne $year $current_year }}
-        {{ if ne $current_year "" }}</div>{{ end }}
-        <h2 class="pubs-year">{{ $year }}</h2>
-        <div class="pubs-year-list">
-        {{ $current_year = $year }}
+    {{/* Year-grouped flat list; set design.group_by_year: false to disable headings */}}
+    {{ $group_by_year := $block.Params.design.group_by_year | default true }}
+    {{ if $group_by_year }}
+      {{ $current_year := "" }}
+      {{ range $index, $item := $query }}
+        {{ $year := $item.Date.Format "2006" }}
+        {{ if ne $year $current_year }}
+          {{ if ne $current_year "" }}</div>{{ end }}
+          <h2 class="pubs-year">{{ $year }}</h2>
+          <div class="pubs-year-list">
+          {{ $current_year = $year }}
+        {{ end }}
+        {{ partial "views/citation" (dict "page" $block "item" $item "index" $index) }}
       {{ end }}
-      {{ partial "views/citation" (dict "page" $block "item" $item "index" $index) }}
+      {{ if ne $current_year "" }}</div>{{ end }}
+    {{ else }}
+      <div class="pubs-year-list">
+      {{ range $index, $item := $query }}
+        {{ partial "views/citation" (dict "page" $block "item" $item "index" $index) }}
+      {{ end }}
+      </div>
     {{ end }}
-    {{ if ne $current_year "" }}</div>{{ end }}
   {{ else }}
     {{ range $index, $item := $query }}
       {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index) }}
