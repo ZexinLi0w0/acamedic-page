@@ -82,7 +82,7 @@ My research interests lie in interdisciplinary fields of real-time embedded syst
 I am actively looking for cooperation in the following topics: (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
 
 
-<span style="color: red;"><strong>I am on job market now!</strong></span> I am currently on the 2025-2026 job market and open to opportunities in real-time embedded systems, on-device machine learning, cyber-physical systems, AI/ML, and embedded intelligent systems research. I welcome conversations with teams working on cutting-edge machine learning systems and embedded intelligent systems workflows. Feel free to reach out at 📧 zli536@ucr.edu if you believe there might be a fit.
+<span style="color: red;"><strong>I am an incoming postdoctoral research fellow at Nanyang Technological University (NTU).</strong></span>
 
 <span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>
 

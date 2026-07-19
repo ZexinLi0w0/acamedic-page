@@ -117,15 +117,21 @@ html[data-bs-theme="dark"],
 /* ---------- Hero ---------- */
 
 .about-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
+  /* Float layout: text wraps beside the photo and, below it, returns to the
+     photo's left edge (instead of leaving an empty left column). */
+  display: block;
   padding: 0.5rem 0 1rem;
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 .about-hero__photo {
-  flex: 0 0 auto;
+  float: left;
+  margin: 0 2rem 1rem 0;
 }
 
 .about-avatar {
@@ -138,7 +144,6 @@ html[data-bs-theme="dark"],
 }
 
 .about-hero__body {
-  flex: 1 1 280px;
   min-width: 0;
 }
 
@@ -349,7 +354,7 @@ html[data-bs-theme="dark"],
 .pub-entry__venue-mobile { display: none; }
 
 @media (max-width: 640px) {
-  .about-hero { gap: 1rem; }
+  .about-hero__photo { margin: 0 1rem 0.75rem 0; }
   .about-avatar { width: 150px; height: 150px; }
   .about-name { font-size: 1.5rem; }
 
