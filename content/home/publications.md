@@ -34,7 +34,7 @@ content:
   # Page order: descending (desc) or ascending (asc) date.
   order: desc
 design:
-  # compact view: title + authors + links, no year shown.
-  view: compact
+  # citation view: same custom pub-entry style as the full list at /pub/.
+  view: citation
   columns: '2'
 ---
