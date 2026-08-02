@@ -10,8 +10,11 @@ role: Ph.D. Student of ECE
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: The University of California, Riverside
-  url: "https://www.ucr.edu"
+- name: Nanyang Technological University
+  url: "https://www.ntu.edu.sg"
+- name: College of Computing and Data Science
+  url: "https://www.ntu.edu.sg/computing"
+- name: "zexin[dot]li[at]ntu[dot]edu[dot]sg"
 
 # Short bio (displayed in user profile at end of posts)
 bio: I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. Cong Liu . I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning. I am actively looking for cooperation in the following topics - (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
@@ -43,7 +46,7 @@ education:
 social:
 - icon: envelope
   icon_pack: far
-  link: mailto:zli536@ucr.edu
+  link: mailto:zexin.li@ntu.edu.sg
 - icon: dblp
   icon_pack: ai
   link: https://dblp.org/pid/221/0808-1.html
@@ -71,7 +74,7 @@ social:
 #   link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "mailto:zli536@ucr.edu"
+email: "mailto:zexin.li@ntu.edu.sg"
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
