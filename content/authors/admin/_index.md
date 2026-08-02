@@ -5,19 +5,16 @@ title: Zexin Li
 # Is this the primary user of the site?
 superuser: true
 
-# Role/position/tagline
-role: Ph.D. Student of ECE
-
 # Organizations/Affiliations to show in About widget
 organizations:
 - name: Nanyang Technological University
   url: "https://www.ntu.edu.sg"
 - name: College of Computing and Data Science
   url: "https://www.ntu.edu.sg/computing"
-- name: "zexin[dot]li[at]ntu[dot]edu[dot]sg"
+- name: "zexin [dot] li [at] ntu [dot] edu [dot] sg"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. Cong Liu . I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning. I am actively looking for cooperation in the following topics - (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
+bio: I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. Cong Liu. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning. I am actively looking for cooperation in the following topics - (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
 
 # Interests to show in About widget
 interests:
@@ -79,7 +76,7 @@ email: "mailto:zexin.li@ntu.edu.sg"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am a Ph.D. student at the University of California, Riverside (UCR). I am fortunate to be advised by Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
+I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning.
 
 I am actively looking for cooperation in the following topics: (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
