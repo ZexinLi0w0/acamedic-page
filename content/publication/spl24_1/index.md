@@ -6,7 +6,7 @@ title: "Transferable Adversarial Attacks against ASR"
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - Xiaoxue Gao
-- Zexin Li
+- Zexin Li*
 - Yiming Chen
 - Cong Liu
 - Haizhou Li
