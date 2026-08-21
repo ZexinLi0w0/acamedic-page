@@ -10,6 +10,7 @@ subtitle:
 design:
   columns: '1'
 ---
+08/2026 - One paper is accepted by {{< staticref "https://easychair.org/conferences/?conf=iccd2026" "newtab" >}}ICCD'26{{< /staticref >}}.<br>
 07/2026 - One paper is accepted by {{< staticref "https://2026.rtss.org/" "newtab" >}}RTSS'26{{< /staticref >}}.<br>
 06/2026 - One paper is accepted by {{< staticref "https://eccv.ecva.net/" "newtab" >}}ECCV'26{{< /staticref >}}.<br>
 05/2026 - I'm excited to share that I've successfully defended my Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}University of California, Riverside{{< /staticref >}}, with my dissertation "Towards Deployable On-Device Machine Learning Systems". Committee members: Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}, Dr. Hyoseung Kim, and Dr. Jun Sheng.<br>
