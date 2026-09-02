@@ -30,7 +30,7 @@ publication_types: ["1"]
 publication: In *44th IEEE International Conference on Computer Design*
 publication_short: In *ICCD'26*
 
-abstract: "To appear."
+abstract: "Multimodal model inference creates substantial energy demand with growing performance requirements. Within GPUs, power is autonomously managed by an on-board power management unit (PMU), which makes frequency boosting/throttling decisions. However, we find that these hardware-managed frequency decisions can cause significant power inefficiency. This work identifies three classes of power inefficiencies within modern multimodal inference serving: (1) inter-stage dependency stalls run at near maximum frequency despite being idle; (2) anti-correlation between auto-boost frequency and arithmetic intensity (A.I.) results in compute-bound phases (e.g., prefill) running at lower frequency and vice versa; and (3) thermal throttling degrades SM frequency and throughput. We propose Tri-serve, a software-based DVFS controller that jointly accounts for three classes of inefficiency -- inter-stage Dependency stalls, the Arithmetic-intensity effect on frequency and power, and the Thermal-throttling effect of high A.I. phases -- to deliver energy-efficient multimodal serving on commodity GPUs. We show that Tri-serve achieves 22% energy efficiency improvement with no latency or throughput impacts."
 
 # Summary. An optional shortened abstract.
 summary:
