@@ -40,7 +40,7 @@ tags: [system]
 # Display this page in the Featured widget?
 featured: false
 
-url_pdf: ''
+url_pdf: 'https://arxiv.org/pdf/2606.29629'
 url_code: ''
 url_dataset: ''
 url_poster: ''
