@@ -18,23 +18,15 @@ design:
 07/2025 - One paper is accepted by {{< staticref "http://2025.rtss.org/" "newtab" >}}RTSS'25{{< /staticref >}}.<br>
 07/2024 - Two papers are accepted by {{< staticref "http://2024.rtss.org/" "newtab" >}}RTSS'24{{< /staticref >}}.<br>
 07/2023 - Three papers are accepted by {{< staticref "http://2023.rtss.org/" "newtab" >}}RTSS'23{{< /staticref >}}.<br>
-<details><summary>11/2025 - 08/2026 - Multiple papers are accepted by AAAI'26, ACL'26, ECCV'26, and ICCD'26.</summary>
+<details><summary>02/2023 - 08/2026 - Multiple papers are accepted by IROS'23, ACL'23, CVPR'23, EMNLP'25, IEEE Signal Processing Letters, FSE'24, AAAI'26, ACL'26, ECCV'26, and ICCD'26.</summary>
 <ul>
 <li>11/2025 - One paper is accepted by {{< staticref "https://aaai.org/conference/aaai/aaai-26/" "newtab" >}}AAAI'26{{< /staticref >}}.</li>
 <li>04/2026 - Two papers are accepted by {{< staticref "https://2026.aclweb.org/" "newtab" >}}ACL'26{{< /staticref >}}.</li>
 <li>06/2026 - One paper is accepted by {{< staticref "https://eccv.ecva.net/" "newtab" >}}ECCV'26{{< /staticref >}}.</li>
 <li>08/2026 - One paper is accepted by {{< staticref "https://easychair.org/conferences/?conf=iccd2026" "newtab" >}}ICCD'26{{< /staticref >}}.</li>
-</ul>
-</details>
-<details><summary>04/2024 - 08/2025 - Multiple papers are accepted by EMNLP'25, IEEE Signal Processing Letters, and FSE'24.</summary>
-<ul>
 <li>08/2025 - Two papers are accepted by {{< staticref "https://2025.emnlp.org/" "newtab" >}}EMNLP'25{{< /staticref >}}.</li>
 <li>08/2024 - One paper is accepted by {{< staticref "https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters" "newtab" >}}IEEE Signal Processing Letters{{< /staticref >}}.</li>
 <li>04/2024 - One paper is accepted by {{< staticref "https://2024.esec-fse.org/" "newtab" >}}FSE'24{{< /staticref >}}.</li>
-</ul>
-</details>
-<details><summary>02/2023 - 06/2023 - Multiple papers are accepted by IROS'23, ACL'23, and CVPR'23.</summary>
-<ul>
 <li>06/2023 - One paper is accepted by {{< staticref "https://ieee-iros.org/" "newtab" >}}IROS'23{{< /staticref >}}.</li>
 <li>05/2023 - Two papers are accepted by {{< staticref "https://2023.aclweb.org/" "newtab" >}}ACL'23{{< /staticref >}}.</li>
 <li>02/2023 - One paper is accepted by {{< staticref "https://cvpr.thecvf.com/" "newtab" >}}CVPR'23{{< /staticref >}}.</li>
