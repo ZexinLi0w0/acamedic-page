@@ -11,6 +11,7 @@ organizations:
   url: "https://www.ntu.edu.sg"
 - name: College of Computing and Data Science
   url: "https://www.ntu.edu.sg/computing"
+- name: Postdoctoral Research Fellow
 - name: "zexin [dot] li [at] ntu [dot] edu [dot] sg"
 
 # Short bio (displayed in user profile at end of posts)
@@ -81,8 +82,6 @@ My research interests lie in interdisciplinary fields of real-time embedded syst
 
 I am actively looking for cooperation in the following topics: (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
 
-
-<span style="color: red;"><strong>I am an incoming postdoctoral research fellow at Nanyang Technological University (NTU).</strong></span>
 
 <span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>
 
