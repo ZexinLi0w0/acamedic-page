@@ -63,6 +63,9 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/lizexin0903
+- icon: cv
+  icon_pack: ai
+  link: uploads/cv.pdf
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
@@ -84,5 +87,3 @@ I am actively looking for cooperation in the following topics: (1) deploying mac
 
 
 <span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}Curriculum Vitae{{< /staticref >}}.
