@@ -24,8 +24,8 @@ publishDate: "2026-07-25T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *47th IEEE Real-Time Systems Symposium*
-publication_short: In *RTSS'26*
+publication: "In *47th IEEE Real-Time Systems Symposium* 🏅 [Artifacts Evaluated](https://2026.rtss.org/program/program/)"
+publication_short: "In *RTSS'26* 🏅 [Artifacts Evaluated](https://2026.rtss.org/program/program/)"
 
 abstract: "Online continual learning (OCL) is an enabling technology for safety-critical autonomous embedded systems whose deployment environments shift faster than fleet-trained models or cloud round-trips can correct. Perception must meet hard sub-second deadlines on a single embedded GPU while training shares the same device; existing OCL runtimes either serialize the two phases or alternate them at coarse cadence, leaving the GPU underutilized and offering no guarantee on inference timing. We present AOCL, a self-adaptive OCL runtime for concurrent training and inference on a single embedded GPU, designed to be safe by construction (deadline-aware safeguard with bounded recovery), practical (drop-in Avalanche plugin, one default hyperparameter setting across all evaluated cells, no offline workload model), and generalizable (validated across two Jetson platforms, four backbones from ResNet-20 to ResNet-101 and ViT-Tiny, four OCL algorithms, and five benchmarks)."
 
