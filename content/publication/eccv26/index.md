@@ -32,7 +32,7 @@ publication_types: ["1"]
 publication: In *European Conference on Computer Vision*
 publication_short: In *ECCV'26*
 
-abstract: ""
+abstract: "Vision-Language Models (VLMs) are increasingly deployed in real-world applications. To ensure efficient inference, these deployments typically rely on specialized system kernels (e.g., CUDA or cuDNN) for acceleration. However, existing system-level research on VLMs has focused primarily on improving kernel efficiency and performance, while largely overlooking their potential impact on model security and robustness. In particular, the security implications of inconsistencies between training and inference kernels remain underexplored. To address this gap, we present the first systematic study revealing a new class of vulnerabilities: system-level backdoor attacks that exploit floating-point inconsistencies across training and inference kernels. We introduce VLMSysTrojan, a red-teaming framework that constructs models behaving benignly under standard training kernels but exhibiting backdoored behavior when executed on specific target inference kernels. Specifically, VLMSysTrojan produces models whose backdoor triggers remain inactive under standard kernels and successfully evade three state-of-the-art backdoor detection methods. Yet, when deployed on a target kernel, kernel-specific floating-point behavior activates the backdoor. Empirically, the compromised models achieve a 99% attack success rate on triggered inputs while maintaining normal accuracy on clean inputs. Moreover, the attack generalizes across multiple kernel configurations, exposing a previously unrecognized risk in VLM deployment and highlighting the urgent need for kernel-aware robustness analysis techniques."
   
 # Summary. An optional shortened abstract.
 summary:
@@ -47,7 +47,7 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
+url_pdf: 'https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/3732.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
