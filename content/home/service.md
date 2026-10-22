@@ -11,5 +11,6 @@ design:
   columns: '1'
 ---
 - **Area Chair:** ARR
+- **Program Committee Member:** RTAS
 - **Reviewer:** CVPR, ECCV, NeurIPS, ICLR, AAAI, ACL, EMNLP, IROS, TPAMI, IJCV, TNNLS, TCSVT, TODAES, SPL
-- **Secondary Reviewer:** RTSS, RTAS, EMSOFT, ECRTS, RTNS
+- **Secondary Reviewer:** RTSS, EMSOFT, ECRTS, RTNS
