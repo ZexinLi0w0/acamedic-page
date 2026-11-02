@@ -5,3 +5,13 @@
   {{ $css := $custom | toCSS $opts | fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{ end }}
+
+{{ if eq .RelPermalink "/publication/rtss26_1/" }}
+  <meta name="citation_title" content="{{ .Title }}">
+  {{ range .Params.authors }}
+  <meta name="citation_author" content="{{ . }}">
+  {{ end }}
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="47th IEEE Real-Time Systems Symposium (RTSS)">
+  <meta name="citation_pdf_url" content="{{ .Params.url_pdf | absURL }}">
+{{ end }}
