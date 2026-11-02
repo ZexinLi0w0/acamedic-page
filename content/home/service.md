@@ -12,5 +12,5 @@ design:
 ---
 - **Area Chair:** ACL ARR
 - **Program Committee Member:** RTAS
-- **Reviewer:** CVPR, ECCV, NeurIPS, ICLR, AAAI, ACL, EMNLP, IROS, WWW, TPAMI, IJCV, TNNLS, TCSVT, TODAES, SPL
+- **Reviewer:** CVPR, ECCV, NeurIPS, ICLR, AAAI, ACL, EMNLP, IROS, WWW, TPAMI, IJCV, TNNLS, TCSVT, TODAES, JSA, SPL
 - **Secondary Reviewer:** RTSS, EMSOFT, ECRTS, RTNS
