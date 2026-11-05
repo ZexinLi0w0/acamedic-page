@@ -1,5 +1,5 @@
 ---
-title: "RED: Adaptive Real-Time DAG Scheduling for Robotic Inference under Environmental Dynamics"
+title: "MERIS: Adaptive Real-Time Scheduling of Refined Inference DAGs in Dynamic Robotic Environments"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -10,6 +10,11 @@ authors:
 - Johnathan Liu
 - Xiaoxi He
 - Cong Liu
+
+# Co-first authors: marked with a superscript "*" in the publication list.
+equal_contribution:
+- Zexin Li
+- Tao Ren
 
 # Author notes (optional)
 # author_notes:
@@ -32,7 +37,7 @@ publication_types: ["1"]
 publication: In *Submission to TECS*
 publication_short: In *Submission to TECS*
 
-abstract: "To appear."
+abstract: "Robots deployed in dynamic environments execute changing directed-acyclic-graph (DAG) workloads under limited compute and timing budgets. This article presents MERIS, a framework for model scheduling under real-time constraints that combines proportional intermediate deadlines, MIMONet-aware graph refinement, and event-driven synchronization for multi-task inference on resource-constrained robotic platforms. We distinguish three representations: the application DAG, each MIMONet's internal encoder/decoder graph, and the refined scheduling DAG, and make the scope of the timing argument explicit. If the profiled execution bounds, release assumptions, precedence barriers, and per-level capacity premises hold, satisfaction of the assigned sub-deadlines composes to the end-to-end deadline. For non-partitionable tasks, we define a profile-bounded admission rule; before interpreting that rule as empirical timing evidence, we require direct per-task completion checks. We report run-level QoE alongside the offered-node deadline missing rate, making explicit that run completion and successful service of every node are different outcomes. We propose a comprehensive minibenchmark for evaluating the performance of schedulers under various DNN-driven autonomous driving scenarios. Extensive experiments on Nano Orin, AGX Orin, and M3 Max demonstrate the effectiveness of our proposed method."
   
 # Summary. An optional shortened abstract.
 summary:
