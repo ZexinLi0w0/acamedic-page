@@ -11,6 +11,11 @@ authors:
 - Arvind Easwaran
 - Simin Chen
 
+# Co-first authors: marked with a superscript "*" in the publication list.
+equal_contribution:
+- Zexin Li
+- Weibo Zhang
+
 # Author notes (optional)
 # author_notes:
 # - "Equal contribution"

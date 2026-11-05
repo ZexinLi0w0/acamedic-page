@@ -51,6 +51,10 @@
     </div>
     <div class="pub-entry__authors">
       {{ $authors_html := partial "page_metadata_authors" $item }}
+      {{/* Mark equal-contribution (co-first) authors listed in `equal_contribution` with a superscript "*". */}}
+      {{ range $item.Params.equal_contribution }}
+        {{ $authors_html = replaceRE (printf `>(\s*)%s(\s*)<` (. | replaceRE `([.*+?^${}()|\[\]\\])` `\$1`)) (printf `>${1}%s<sup class="equal-contrib">*</sup>${2}<` .) $authors_html }}
+      {{ end }}
       {{ $highlight_names := slice "Zexin Li" }}
       {{ range $highlight_names }}
         {{ $authors_html = replace $authors_html . (printf "<strong class=\"me-author\">%s</strong>" .) }}
