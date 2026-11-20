@@ -54,7 +54,7 @@
     {{ end }}
 
     {{ with $person.social }}
-    <ul class="about-social" aria-hidden="true">
+    <ul class="about-social">
       {{ range . }}
         {{ $pack := or .icon_pack "fas" }}
         {{ $pack_prefix := $pack }}
@@ -70,7 +70,8 @@
           {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
         {{ end }}
         {{ $label := .icon }}
-        {{ if eq .icon "envelope" }}{{ $label = "Email" }}
+        {{ if .label }}{{ $label = .label }}
+        {{ else if eq .icon "envelope" }}{{ $label = "Email" }}
         {{ else if eq .icon "google-scholar" }}{{ $label = "Scholar" }}
         {{ else if eq .icon "researchgate" }}{{ $label = "ResearchGate" }}
         {{ else if eq .icon "linkedin" }}{{ $label = "LinkedIn" }}

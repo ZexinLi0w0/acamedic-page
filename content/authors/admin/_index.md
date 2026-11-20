@@ -15,7 +15,7 @@ organizations:
 - name: "zexin [dot] li [at] ntu [dot] edu [dot] sg"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. Cong Liu. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning. I am actively looking for cooperation in the following topics - (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
+bio: I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. Cong Liu. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning. I welcome collaborations on trustworthy interactive AI at the edge. My work asks how systems such as on-device voice assistants can switch models and recover from overload within memory and timing limits. I also study when evidence about a model’s behavior remains valid after the model or its inputs change.
 
 # Interests to show in About widget
 interests:
@@ -54,6 +54,10 @@ social:
 - icon: cv
   icon_pack: ai
   link: uploads/cv.pdf
+- icon: file-alt
+  icon_pack: fas
+  label: Research Statement
+  link: uploads/research-statement.pdf
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
@@ -71,7 +75,7 @@ highlight_name: true
 I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning.
 
-I am actively looking for cooperation in the following topics: (1) deploying machine learning models on real-time embedded devices, (2) system-application co-optimization of machine learning systems, and (3) improving performance robustness in machine learning systems.
+I welcome collaborations on trustworthy interactive AI at the edge. My work asks how systems such as on-device voice assistants can switch models and recover from overload within memory and timing limits. I also study when evidence about a model’s behavior remains valid after the model or its inputs change.
 
 
 <span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>
