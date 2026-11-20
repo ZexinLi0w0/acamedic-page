@@ -354,7 +354,8 @@ html[data-bs-theme="dark"],
   color: #222 !important;
 }
 
-#publications .pub-award {
+#publications .pub-award,
+#publications .pub-artifacts {
   display: inline-block;
   background-color: #d32f2f;
   color: #fff;
@@ -368,9 +369,19 @@ html[data-bs-theme="dark"],
   text-transform: none;
 }
 
+#publications .pub-artifacts {
+  background-color: #1565c0;
+  text-decoration: none;
+
+  &:hover { background-color: #0d47a1; }
+  &:focus-visible {
+    outline: 3px solid #1a73e8;
+    outline-offset: 2px;
+  }
+}
+
 .pub-pdf,
-.pub-cite,
-.pub-artifacts {
+.pub-cite {
   font-size: 0.82rem;
   color: #1463a3;
   text-decoration: none;

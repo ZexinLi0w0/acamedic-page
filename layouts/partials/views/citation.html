@@ -51,6 +51,10 @@
   {{ $venue_html = printf `<span class="pub-award"><span aria-hidden="true">🏆</span> %s</span> %s` (. | htmlEscape) $venue_html }}
 {{ end }}
 
+{{ with $selection.artifacts_url }}
+  {{ $venue_html = printf `<a class="pub-artifacts" href="%s" target="_blank" rel="noopener"><span aria-hidden="true">✓</span> Artifacts Evaluated</a> %s` (. | htmlEscape) $venue_html }}
+{{ end }}
+
 <div class="pub-entry">
   <div class="pub-entry__main">
     <div class="pub-entry__title">
@@ -85,9 +89,6 @@
     {{ $cite := $item.Resources.GetMatch "cite.bib" }}
     {{ with $cite }}
       <a class="pub-cite js-cite-modal" href="#" data-filename="{{ .RelPermalink }}">[BibTeX]</a>
-    {{ end }}
-    {{ with $selection.artifacts_url }}
-      <a class="pub-artifacts" href="{{ . }}" target="_blank" rel="noopener">[Artifacts Evaluated]</a>
     {{ end }}
   </div>
 </div>
