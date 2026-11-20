@@ -80,10 +80,10 @@ My research interests lie in interdisciplinary fields of real-time embedded syst
 I am actively looking for cooperation in the following topics:
 
 <ol class="cooperation-topics">
-<li>deploying interactive AI models on memory-constrained edge devices;</li>
-<li>co-scheduling inference and model updates within memory budgets and response deadlines;</li>
-<li>on-device system overload detection, safe fallback and recovery;</li>
-<li>verifying consistency between pre- and post-deployed model pipelines.</li>
+<li>deploying interactive AI models on memory-constrained edge devices</li>
+<li>co-scheduling inference and model updates within memory budgets and response deadlines</li>
+<li>on-device system overload detection, safe fallback and recovery</li>
+<li>verifying consistency between pre- and post-deployed model pipelines</li>
 </ol>
 
 
