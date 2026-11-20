@@ -12,7 +12,7 @@ design:
 ---
 07/2026 - Join NTU’s [Hardware & Embedded Systems Lab (HESL)](https://www.ntu.edu.sg/hesl) as a postdoctoral fellow with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/).<br>
 07/2026 - One paper is accepted by {{< staticref "https://2026.rtss.org/" "newtab" >}}RTSS'26{{< /staticref >}}.<br>
-05/2026 - I'm excited to share that I've successfully defended my Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}University of California, Riverside{{< /staticref >}}, with my dissertation "Towards Deployable On-Device Machine Learning Systems". Committee members: Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}, Dr. Hyoseung Kim, and Dr. Jun Sheng.<br>
+05/2026 - Defended my Ph.D. dissertation, *Towards Deployable On-Device Machine Learning Systems*, at [UC Riverside](https://www.ucr.edu/). My committee included [Cong Liu](https://congucr.github.io/), Hyoseung Kim, and Jun Sheng.<br>
 03/2026 - One paper is accepted by {{< staticref "https://jmlr.org/tmlr/" "newtab" >}}TMLR{{< /staticref >}}.<br>
 01/2026 - Honored to receive the Dissertation Completion Fellowship Award (DCFA), {{< staticref "https://www.ucr.edu/" "newtab" >}}UCR{{< /staticref >}}.<br>
 12/2025 - Our RTSS'25 paper received <span style="color: red;">Outstanding Paper Award</span>.<br>
