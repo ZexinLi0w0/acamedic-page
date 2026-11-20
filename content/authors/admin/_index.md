@@ -17,7 +17,7 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: >-
   I am a postdoctoral research fellow at Nanyang Technological University, where I work with Dr. Arvind Easwaran. I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. Cong Liu. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. Yuqun Zhang in July 2020. My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning.
-  I am actively looking for cooperation in the following topics: (1) deploying interactive AI models on resource constrained edge devices; (2) co-scheduling inference and model updates within resource constraints and response deadlines; (3) on-device system overload detection, safe fallback and recovery; (4) verifying consistency between pre- and post-deployed model pipelines.
+  I am actively looking for cooperation in the following topics: (1) deploying interactive AI models on resource constrained edge devices; (2) co-scheduling inference and model updates within resource constraints and response deadlines; (3) on-device system overload detection, safe fallback and recovery; (4) consistency verification between pre- and post-deployed model pipelines.
 
 # Interests to show in About widget
 interests:
@@ -83,7 +83,7 @@ I am actively looking for cooperation in the following topics:
 <li>deploying interactive AI models on resource constrained edge devices</li>
 <li>co-scheduling inference and model updates within resource constraints and response deadlines</li>
 <li>on-device system overload detection, safe fallback and recovery</li>
-<li>verifying consistency between pre- and post-deployed model pipelines</li>
+<li>consistency verification between pre- and post-deployed model pipelines</li>
 </ol>
 
 
