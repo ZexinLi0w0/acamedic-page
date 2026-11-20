@@ -423,6 +423,11 @@ html[data-bs-theme="dark"],
   width: 100%;
 }
 
+#publications .section-heading a {
+  font-size: 0.85rem;
+  color: #1463a3;
+}
+
 /* Force every text node inside News + Publications to align left. */
 #news,
 #news .row,

@@ -1,7 +1,7 @@
 ---
 # Selected publications on the homepage: all RTSS papers + Mixtraining (TMLR).
 # Selection is controlled by `featured: true` in each publication's front matter.
-# The full list is archived (unlinked) at /pub/.
+# The full list is available at /pub/.
 active: true
 widget: pages
 
@@ -12,7 +12,7 @@ headless: true
 weight: 30
 
 title: Selected Publications
-subtitle: ''
+subtitle: '[Full publications](/pub/)'
 
 content:
   # Filter on criteria
