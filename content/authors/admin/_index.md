@@ -74,7 +74,7 @@ email: "mailto:zexin.li@ntu.edu.sg"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am a postdoctoral research fellow at Nanyang Technological University, where I work with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/). I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
+I am a postdoctoral research fellow at Nanyang Technological University, where I work with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/). I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. {{< staticref "https://congucr.github.io/index.html" "newtab" >}}Cong Liu{{< /staticref >}}. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning.
 
 I am actively looking for cooperation in the following topics:
