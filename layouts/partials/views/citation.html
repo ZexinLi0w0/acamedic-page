@@ -47,6 +47,10 @@
   {{ end }}
 {{ end }}
 
+{{ with $selection.award }}
+  {{ $venue_html = printf `<span class="pub-award"><span aria-hidden="true">🏆</span> %s</span> %s` (. | htmlEscape) $venue_html }}
+{{ end }}
+
 <div class="pub-entry">
   <div class="pub-entry__main">
     <div class="pub-entry__title">
@@ -67,7 +71,6 @@
       {{ end }}
       {{ $authors_html | safeHTML }}{{ if $selection.cofirst }} <small>(* equal contribution)</small>{{ end }}
     </div>
-    {{ with $selection.note }}<div><small>{{ . | markdownify }}</small></div>{{ end }}
     {{ with $venue_html }}
       <div class="pub-entry__venue-mobile">
         <span class="pub-venue">{{ . | safeHTML }}</span>
@@ -82,6 +85,9 @@
     {{ $cite := $item.Resources.GetMatch "cite.bib" }}
     {{ with $cite }}
       <a class="pub-cite js-cite-modal" href="#" data-filename="{{ .RelPermalink }}">[BibTeX]</a>
+    {{ end }}
+    {{ with $selection.artifacts_url }}
+      <a class="pub-artifacts" href="{{ . }}" target="_blank" rel="noopener">[Artifacts Evaluated]</a>
     {{ end }}
   </div>
 </div>
