@@ -82,7 +82,15 @@
   {{ if $is_citation }}
     {{/* Year-grouped flat list; set design.group_by_year: false to disable headings */}}
     {{ $group_by_year := $block.Params.design.group_by_year | default true }}
-    {{ if $group_by_year }}
+    {{ if $block.Params.content.selected }}
+      <div class="pubs-year-list">
+        {{ range $selection := $block.Params.content.selected }}
+          {{ $item := site.GetPage $selection.page }}
+          {{ if not $item }}{{ errorf "Missing selected publication: %s" $selection.page }}{{ end }}
+          {{ partial "views/citation" (dict "page" $block "item" $item "selection" $selection) }}
+        {{ end }}
+      </div>
+    {{ else if $group_by_year }}
       {{ $current_year := "" }}
       {{ range $index, $item := $query }}
         {{ $year := $item.Date.Format "2006" }}

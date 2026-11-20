@@ -1,5 +1,6 @@
 {{/* Override: minimal flat publication entry (Junfeng-style) */}}
 {{ $item := .item }}
+{{ $selection := .selection | default dict }}
 
 {{/* Resolve PDF link: bundled PDF or url_pdf */}}
 {{ $pdf := "" }}
@@ -12,7 +13,9 @@
 
 {{/* Venue tag — prefer publication_short, fallback to publication */}}
 {{ $venue := "" }}
-{{ if $item.Params.publication_short }}
+{{ if $selection.venue }}
+  {{ $venue = $selection.venue }}
+{{ else if $item.Params.publication_short }}
   {{ $venue = $item.Params.publication_short }}
 {{ else if $item.Params.publication }}
   {{ $venue = $item.Params.publication }}
@@ -47,7 +50,7 @@
 <div class="pub-entry">
   <div class="pub-entry__main">
     <div class="pub-entry__title">
-      <a href="{{ if $pdf }}{{ $pdf }}{{ else }}{{ $item.RelPermalink }}{{ end }}"{{ if $pdf }} target="_blank" rel="noopener"{{ end }}>{{ $item.Title }}</a>
+      <a href="{{ or $selection.url $pdf $item.RelPermalink }}"{{ if or $selection.url $pdf }} target="_blank" rel="noopener"{{ end }}>{{ or $selection.title $item.Title }}</a>
     </div>
     <div class="pub-entry__authors">
       {{ $authors_html := partial "page_metadata_authors" $item }}
@@ -59,8 +62,12 @@
       {{ range $highlight_names }}
         {{ $authors_html = replace $authors_html . (printf "<strong class=\"me-author\">%s</strong>" .) }}
       {{ end }}
-      {{ $authors_html | safeHTML }}
+      {{ if $selection.cofirst }}
+        {{ $authors_html = replace $authors_html "*</span>" "<sup class=\"equal-contrib\">*</sup></span>" }}
+      {{ end }}
+      {{ $authors_html | safeHTML }}{{ if $selection.cofirst }} <small>(* equal contribution)</small>{{ end }}
     </div>
+    {{ with $selection.note }}<div><small>{{ . | markdownify }}</small></div>{{ end }}
     {{ with $venue_html }}
       <div class="pub-entry__venue-mobile">
         <span class="pub-venue">{{ . | safeHTML }}</span>
