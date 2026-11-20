@@ -10,7 +10,7 @@ subtitle:
 design:
   columns: '1'
 ---
-07/2026 - Join [Hardware & Embedded Systems Lab (HESL)](https://www.ntu.edu.sg/hesl) at Nanyang Technological University (NTU) as a postdoctoral research fellow working with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/).<br>
+07/2026 - Join NTU’s [Hardware & Embedded Systems Lab (HESL)](https://www.ntu.edu.sg/hesl) as a postdoctoral fellow with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/).<br>
 07/2026 - One paper is accepted by {{< staticref "https://2026.rtss.org/" "newtab" >}}RTSS'26{{< /staticref >}}.<br>
 05/2026 - I'm excited to share that I've successfully defended my Ph.D. at {{< staticref "https://www.ucr.edu/" "newtab" >}}University of California, Riverside{{< /staticref >}}, with my dissertation "Towards Deployable On-Device Machine Learning Systems". Committee members: Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}, Dr. Hyoseung Kim, and Dr. Jun Sheng.<br>
 03/2026 - One paper is accepted by {{< staticref "https://jmlr.org/tmlr/" "newtab" >}}TMLR{{< /staticref >}}.<br>
