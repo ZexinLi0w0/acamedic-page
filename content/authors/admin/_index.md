@@ -77,7 +77,14 @@ highlight_name: true
 I am a postdoctoral research fellow at Nanyang Technological University, where I work with Dr. [Arvind Easwaran](https://personal.ntu.edu.sg/arvinde/). I received a Ph.D. degree from the University of California, Riverside (UCR) under the advice of Dr. {{< staticref "https://intra.ece.ucr.edu/~cong/" "newtab" >}}Cong Liu{{< /staticref >}}. I also received a master’s degree from UCR in 2024. I received a bachelor’s degree from the Southern University of Science and Technology (SUSTech) under the advice of Dr. {{< staticref "https://zhangyuqun.github.io/" "newtab">}}Yuqun Zhang{{< /staticref >}} in July 2020.
 My research interests lie in interdisciplinary fields of real-time embedded systems and on-device machine learning.
 
-I am actively looking for cooperation in the following topics: (1) deploying interactive AI models on memory-constrained edge devices; (2) co-scheduling inference and model updates within memory budgets and response deadlines; (3) on-device system overload detection, safe fallback and recovery; (4) verifying consistency between pre- and post-deployed model pipelines.
+I am actively looking for cooperation in the following topics:
+
+<ol class="cooperation-topics">
+<li>deploying interactive AI models on memory-constrained edge devices;</li>
+<li>co-scheduling inference and model updates within memory budgets and response deadlines;</li>
+<li>on-device system overload detection, safe fallback and recovery;</li>
+<li>verifying consistency between pre- and post-deployed model pipelines.</li>
+</ol>
 
 
 <span style="color: red;"><strong>Feel free to contact me if we share common research interests.</strong></span>

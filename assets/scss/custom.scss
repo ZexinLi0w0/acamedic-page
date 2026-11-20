@@ -196,6 +196,15 @@ html[data-bs-theme="dark"],
   p:last-child {
     margin-bottom: 0;
   }
+
+  .cooperation-topics {
+    margin: -0.4rem 0 0.7rem;
+    padding-inline-start: 2.1em;
+
+    li::marker {
+      content: "(" counter(list-item) ") ";
+    }
+  }
 }
 
 /* ---------- Pill social buttons ---------- */
