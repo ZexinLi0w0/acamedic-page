@@ -5,13 +5,16 @@ body:has(#about.wg-about) {
   --profile-muted: #65584d;
   --profile-rule: #b8ac9d;
   --profile-accent: #a8260a;
-  --profile-font: "DM Sans", "Avenir Next", system-ui, sans-serif;
-  --profile-heading: "Times New Roman", Tinos, Times, serif;
+  --profile-font: "Times New Roman", Tinos, Times, serif;
   font-family: var(--profile-font);
 
   :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--profile-heading);
+    font-family: inherit;
     font-weight: 700;
+  }
+
+  .pub-venue, #modal pre, #modal code {
+    font-family: inherit;
   }
 
   .home-section {
@@ -90,7 +93,7 @@ body:has(#about.wg-about) {
   a { color: var(--page-ink); }
 
   &__mark {
-    font: 700 1.3rem/1 var(--profile-heading);
+    font: 700 1.3rem/1 var(--profile-font);
   }
 
   &__links {
@@ -121,7 +124,7 @@ body:has(#about.wg-about) {
   grid-area: role;
   margin: 0 0 .42rem;
   color: var(--profile-accent);
-  font: 700 .75rem/1.35 "DM Sans", sans-serif;
+  font: 700 .75rem/1.35 var(--profile-font);
   text-transform: uppercase;
   letter-spacing: .125em;
 }

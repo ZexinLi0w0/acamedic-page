@@ -37,7 +37,7 @@
 
   time {
     color: #9a371f;
-    font: 600 .8rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font: 600 .8rem/1.5 var(--profile-font);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
