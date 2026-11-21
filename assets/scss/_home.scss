@@ -5,8 +5,8 @@ body:has(#about.wg-about) {
   --profile-muted: #65584d;
   --profile-rule: #b8ac9d;
   --profile-accent: #a8260a;
-  --profile-display: "Instrument Serif", Georgia, "Times New Roman", serif;
-  font-family: "DM Sans", "Avenir Next", system-ui, sans-serif;
+  --profile-font: "DM Sans", "Avenir Next", system-ui, sans-serif;
+  font-family: var(--profile-font);
 
   .home-section {
     padding: clamp(2.25rem, 5vw, 4rem) 0 0 !important;
@@ -45,8 +45,8 @@ body:has(#about.wg-about) {
     h1 {
       margin: 0;
       color: var(--page-ink);
-      font: 400 clamp(2.25rem, calc(1.55rem + 2.5vw), 3.65rem)/1.04 var(--profile-display);
-      letter-spacing: -.03em;
+      font: 600 clamp(1.55rem, calc(1.3rem + 1.25vw), 2.15rem)/1.16 var(--profile-font);
+      letter-spacing: -.025em;
     }
 
     a {
@@ -83,8 +83,8 @@ body:has(#about.wg-about) {
   a { color: var(--page-ink); }
 
   &__mark {
-    font: 400 1.9rem/1 var(--profile-display);
-    letter-spacing: -.075em;
+    font: 650 1.3rem/1 var(--profile-font);
+    letter-spacing: -.025em;
   }
 
   &__links {
@@ -122,9 +122,9 @@ body:has(#about.wg-about) {
 
 .about-name {
   grid-area: name;
-  font: 400 clamp(3.35rem, calc(2rem + 5.5vw), 6.75rem)/.99 var(--profile-display);
+  font: 600 clamp(2rem, calc(1.35rem + 3vw), 3.55rem)/1.1 var(--profile-font);
   color: var(--page-ink);
-  letter-spacing: -.045em;
+  letter-spacing: -.03em;
   margin: 0 0 .7rem;
 }
 
@@ -155,6 +155,11 @@ body:has(#about.wg-about) {
   grid-area: photo;
   align-self: center;
   justify-self: end;
+  padding: clamp(4px, .65vw, 8px);
+  background: #ecdfd0;
+  border: 1px solid #d9cbbb;
+  border-radius: 7px;
+  box-shadow: 0 3px 9px rgba(80, 55, 36, .07);
 }
 
 .about-avatar {
@@ -162,8 +167,7 @@ body:has(#about.wg-about) {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .about-social {
@@ -255,6 +259,6 @@ body:has(#about.wg-about) {
 }
 
 @media (max-width: 390px) {
-  .about-name { font-size: 2.9rem; }
+  .about-name { font-size: clamp(1.6rem, 8.5vw, 2rem); }
   .about-role { font-size: .68rem; }
 }

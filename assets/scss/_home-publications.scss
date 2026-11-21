@@ -16,11 +16,11 @@
   }
 
   .pub-entry__title {
-    font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
-    font-size: clamp(1.32rem, calc(1.22rem + .55vw), 1.5rem);
-    font-weight: 400;
-    line-height: 1.23;
-    letter-spacing: -.015em;
+    font-family: var(--profile-font);
+    font-size: clamp(1.05rem, calc(1rem + .28vw), 1.2rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -.01em;
     overflow-wrap: break-word;
 
     a { color: #261c16; }
