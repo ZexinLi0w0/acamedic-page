@@ -5,15 +5,16 @@ body:has(#about.wg-about) {
   --profile-muted: #65584d;
   --profile-rule: #b8ac9d;
   --profile-accent: #a8260a;
-  --profile-font: "Times New Roman", Tinos, Times, serif;
+  --profile-font: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --profile-display: "Newsreader", Georgia, "Times New Roman", serif;
   font-family: var(--profile-font);
 
   :is(h1, h2, h3, h4, h5, h6) {
-    font-family: inherit;
-    font-weight: 700;
+    font-family: var(--profile-display);
+    font-weight: 430;
   }
 
-  .pub-venue, #modal pre, #modal code {
+  .pub-venue {
     font-family: inherit;
   }
 
@@ -56,7 +57,7 @@ body:has(#about.wg-about) {
       color: var(--page-ink);
       font-size: clamp(1.55rem, calc(1.3rem + 1.25vw), 2.15rem);
       line-height: 1.16;
-      letter-spacing: normal;
+      letter-spacing: -.025em;
     }
 
     a {
@@ -93,7 +94,7 @@ body:has(#about.wg-about) {
   a { color: var(--page-ink); }
 
   &__mark {
-    font: 700 1.3rem/1 var(--profile-font);
+    font: 480 1.3rem/1 var(--profile-display);
   }
 
   &__links {
