@@ -1,0 +1,78 @@
+#publications {
+  .pubs-wrapper {
+    padding-inline: 0;
+  }
+
+  .pubs-year-list {
+    gap: 0;
+  }
+
+  .pub-entry {
+    display: block;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid #dfd6c5;
+
+    &:last-child { border-bottom: 0; }
+  }
+
+  .pub-entry__title {
+    font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+    font-size: clamp(1.32rem, calc(1.22rem + .55vw), 1.5rem);
+    font-weight: 400;
+    line-height: 1.23;
+    letter-spacing: -.015em;
+    overflow-wrap: break-word;
+
+    a { color: #261c16; }
+    a:hover { color: #a12f1c; }
+  }
+
+  .pub-entry__authors {
+    margin-top: .32rem;
+    color: #584d43;
+    font-size: .85rem;
+    line-height: 1.5;
+
+    .me-author { color: #261c16; }
+  }
+
+  .pub-entry__venue-mobile { display: none; }
+
+  .pub-entry__meta {
+    flex-wrap: wrap;
+    gap: .15rem .65rem;
+    margin-top: .38rem;
+    padding: 0;
+    white-space: normal;
+
+    .pub-venue {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .25rem;
+      margin-inline-end: auto;
+      font-size: .72rem;
+      color: #a12f1c;
+    }
+
+    .pub-pdf, .pub-cite, .pub-code {
+      padding-block: .16rem;
+      color: #155e91;
+      font-size: .8rem;
+    }
+  }
+
+  a:focus-visible {
+    outline: 2px solid #155e91;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .pub-entry { padding-block: 1rem; }
+
+    .pub-entry__meta .pub-venue {
+      flex-basis: 100%;
+      margin-bottom: .15rem;
+    }
+  }
+}

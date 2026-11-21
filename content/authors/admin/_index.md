@@ -11,8 +11,8 @@ organizations:
   url: "https://www.ntu.edu.sg"
 - name: College of Computing and Data Science
   url: "https://www.ntu.edu.sg/computing"
-- name: Postdoctoral Research Fellow
-- name: "zexin [dot] li [at] ntu [dot] edu [dot] sg"
+role: Postdoctoral Research Fellow
+contact_display: "zexin [dot] li [at] ntu [dot] edu [dot] sg"
 
 # Short bio (displayed in user profile at end of posts)
 bio: >-

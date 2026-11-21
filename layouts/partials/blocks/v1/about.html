@@ -18,8 +18,26 @@
 {{ $person := $person_page.Params }}
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 
-<!-- About widget (custom) -->
-<div class="about-hero">
+<nav class="profile-nav" aria-label="Homepage sections">
+  <a class="profile-nav__mark" href="#top" aria-label="{{ $person_page.Title }}, top of page">ZL</a>
+  <div class="profile-nav__links">
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="#service">Service</a>
+  </div>
+</nav>
+
+<header class="about-hero">
+  {{ with $person.role }}<p class="about-role">{{ . }}</p>{{ end }}
+  <h1 class="about-name">{{ $person_page.Title }}</h1>
+  <div class="about-affiliations">
+    {{ range $person.organizations }}
+      <p class="about-affiliation">
+        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}
+      </p>
+    {{ end }}
+    {{ with $person.contact_display }}<p class="about-contact">{{ . }}</p>{{ end }}
+  </div>
   <div class="about-hero__photo">
     {{ if site.Params.features.avatar.gravatar }}
       <img class="about-avatar" src="https://s.gravatar.com/avatar/{{ md5 $person.email }}?s=360" alt="{{ $person_page.Title }}">
@@ -30,28 +48,6 @@
            src="{{ $avatar_image.RelPermalink }}" alt="{{ $person_page.Title }}">
     {{ end }}
   </div>
-
-  <div class="about-hero__body">
-
-    <h1 class="about-name">
-      {{- if $person.name_pronunciation -}}
-        <ruby><rb>{{ $person_page.Title }}</rb><rt>{{ $person.name_pronunciation }}</rt></ruby>
-      {{- else -}}
-        {{- $person_page.Title -}}
-      {{- end -}}
-    </h1>
-
-    {{ with $person.role }}<p class="about-role">{{ . | markdownify | emojify }}</p>{{ end }}
-
-    {{ range $person.organizations }}
-      <p class="about-affiliation">
-        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}
-      </p>
-    {{ end }}
-
-    {{ with $person_page.Content }}
-      <div class="about-bio">{{ . }}</div>
-    {{ end }}
 
     {{ with $person.social }}
     <ul class="about-social">
@@ -90,6 +86,8 @@
       {{ end }}
     </ul>
     {{ end }}
+</header>
 
-  </div>
-</div>
+{{ with $person_page.Content }}
+  <div class="about-bio">{{ . }}</div>
+{{ end }}

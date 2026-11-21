@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Custom restyle: minimal academic homepage (Junfeng-style)
-   ========================================================================== */
+/* Shared styles for the academic site. */
 
 html { color-scheme: only light; }
 
@@ -16,9 +14,9 @@ footer,
 .site-footer,
 nav,
 .navbar {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  color: #222 !important;
+  background: var(--page-background, #fff) !important;
+  background-color: var(--page-background, #fff) !important;
+  color: var(--page-ink, #222) !important;
 }
 
 /* Reset Wowchemy's default vertical padding on widget sections to keep the
@@ -26,159 +24,6 @@ nav,
 .universal-wrapper {
   max-width: 880px;
 }
-
-#about,
-#publications,
-#service,
-#contact {
-  padding-top: 1.75rem !important;
-  padding-bottom: 1.25rem !important;
-}
-
-#about > .universal-wrapper > h1,
-#publications > .universal-wrapper > h1,
-#service > .universal-wrapper > h1 {
-  margin-top: 0;
-}
-
-/* ---------- Hero ---------- */
-
-.about-hero {
-  /* Float layout: text wraps beside the photo and, below it, returns to the
-     photo's left edge (instead of leaving an empty left column). */
-  display: block;
-  padding: 0.5rem 0 1rem;
-
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-.about-hero__photo {
-  float: left;
-  margin: 0 2rem 1rem 0;
-}
-
-.about-avatar {
-  display: block;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px; /* near-square with subtle rounding */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.about-hero__body {
-  min-width: 0;
-}
-
-.about-name {
-  font-size: 1.85rem;
-  font-weight: 700;
-  margin: 0 0 0.35rem;
-  line-height: 1.15;
-}
-
-.about-role {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #444;
-  margin: 0 0 0.15rem;
-}
-
-.about-affiliation {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 0 0 0.6rem;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted #aaa;
-
-    &:hover {
-      color: #1463a3;
-      border-bottom-color: #1463a3;
-    }
-  }
-}
-
-.about-bio {
-  font-size: 0.97rem;
-  line-height: 1.55;
-  color: #333;
-  margin-top: 0.55rem;
-
-  p {
-    margin: 0 0 0.7rem;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  .cooperation-topics {
-    margin: -0.4rem 0 0.7rem;
-    padding-inline-start: 2.1em;
-
-    li::marker {
-      content: "(" counter(list-item) ") ";
-    }
-  }
-}
-
-/* ---------- Pill social buttons ---------- */
-
-.about-social {
-  list-style: none;
-  padding: 0;
-  margin: 0.9rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.about-social__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.32rem 0.75rem;
-  background: #f1f1f3;
-  color: #333 !important;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  text-decoration: none !important;
-  border: 1px solid transparent;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  line-height: 1.2;
-
-  i {
-    font-size: 0.92rem;
-  }
-
-  &:hover {
-    background: #e3e7ef;
-    color: #1463a3 !important;
-    border-color: #c8d2e0;
-  }
-}
-
-/* ---------- Optional notice / banner ---------- */
-
-.notice-banner {
-  background: #fff8d6;
-  border: 1px solid #f1e2a4;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  margin: 1rem 0 1.25rem;
-  font-size: 0.95rem;
-  color: #5a4a00;
-}
-
-/* Highlight any "on the job market" line that's already in the bio. */
-.about-bio strong { color: #b00020; }
 
 /* ---------- Publications: year-grouped flat list ---------- */
 
@@ -317,10 +162,6 @@ nav,
 .pub-entry__venue-mobile { display: none; }
 
 @media (max-width: 640px) {
-  .about-hero__photo { margin: 0 1rem 0.75rem 0; }
-  .about-avatar { width: 150px; height: 150px; }
-  .about-name { font-size: 1.5rem; }
-
   .pub-entry {
     flex-direction: column;
     align-items: flex-start;
@@ -329,97 +170,6 @@ nav,
   .pub-entry__meta .pub-venue { display: none; }
   .pub-entry__venue-mobile { display: block; margin-top: 0.2rem; }
   .pub-entry__meta { padding-top: 0; }
-}
-
-/* ---------- News section: align with Publications style ---------- */
-
-#news .universal-wrapper,
-#service .universal-wrapper {
-  max-width: 880px;
-}
-
-#news .row .col-md-12,
-#news .row .col-md-9,
-#news .row .col-md-3,
-#news .row > [class*='col-'],
-#service .row .col-md-12,
-#service .row .col-md-9,
-#service .row .col-md-3,
-#service .row > [class*='col-'] {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Unify News + Publications section headings: full-width, left-aligned,
-   identical typography. */
-#news .section-heading,
-#publications .section-heading,
-#service .section-heading {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-  text-align: left !important;
-  align-items: flex-start !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-#news .section-heading h1,
-#publications .section-heading h1,
-#service .section-heading h1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.005em;
-  color: #222;
-  margin: 0 0 0.6rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid #e5e5e5;
-  text-align: left !important;
-  width: 100%;
-}
-
-#publications .section-heading a {
-  font-size: 0.85rem;
-  color: #1463a3;
-}
-
-/* Force every text node inside News + Publications to align left. */
-#news,
-#news .row,
-#news .col-12,
-#news p,
-#news .article-style,
-#publications,
-#publications .row,
-#publications .pubs-wrapper,
-#publications .pub-entry,
-#publications .pub-entry__main,
-#service,
-#service .row,
-#service .col-12,
-#service p,
-#service .article-style {
-  text-align: left !important;
-}
-
-#news .section-subheading,
-#service .section-subheading { display: none; }
-
-#news .article-style,
-#news .article-content,
-#service .article-style,
-#service .article-content {
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: #333;
-
-  p { margin: 0 0 0.25rem; }
-  br { display: block; margin: 0; content: ""; }
-  a { color: #1463a3; text-decoration: none; }
-  a:hover { text-decoration: underline; }
 }
 
 /* Hide the old Wowchemy publication "search/filter" controls if they appear
@@ -447,14 +197,6 @@ nav,
   &:hover { text-decoration: underline; }
 }
 
-/* Service section: list items flush-left with the heading, same font as News. */
-#service ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 0;
-}
-
-#service li {
-  margin: 0 0 0.25rem;
-  text-align: left;
-}
+@import "home";
+@import "home-sections";
+@import "home-publications";
