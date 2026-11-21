@@ -16,11 +16,11 @@
   }
 
   .pub-entry__title {
-    font-family: var(--profile-font);
+    font-family: var(--profile-heading);
     font-size: clamp(1.05rem, calc(1rem + .28vw), 1.2rem);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.35;
-    letter-spacing: -.01em;
+    letter-spacing: normal;
     overflow-wrap: break-word;
 
     a { color: #261c16; }
@@ -69,6 +69,8 @@
 
   @media (max-width: 640px) {
     .pub-entry { padding-block: 1rem; }
+
+    .pub-entry__meta :is(.pub-pdf, .pub-cite, .pub-code) { padding-block: .4rem; }
 
     .pub-entry__meta .pub-venue {
       flex-basis: 100%;
