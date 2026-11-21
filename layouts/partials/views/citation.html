@@ -90,5 +90,10 @@
     {{ with $cite }}
       <a class="pub-cite js-cite-modal" href="#" data-filename="{{ .RelPermalink }}">[BibTeX]</a>
     {{ end }}
+    {{ with $selection }}
+      {{ with or .url_code $item.Params.url_code }}
+        <a class="pub-code" href="{{ . }}" target="_blank" rel="noopener"{{ with $selection.code_title }} title="{{ . }}"{{ end }}>[Code]</a>
+      {{ end }}
+    {{ end }}
   </div>
 </div>

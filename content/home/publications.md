@@ -14,18 +14,23 @@ subtitle: '[Full publications](/pub/)'
 content:
   selected:
     - page: /publication/arxiv7
+      url_code: https://github.com/STAR-Computing/ProCerDCL
       url: https://arxiv.org/abs/2610.36499
       venue: "arXiv preprint"
       cofirst: true
     - page: /publication/rtss26_1
+      url_code: https://github.com/ZexinLi0w0/RTCL
       venue: "RTSS'26"
       artifacts_url: https://2026.rtss.org/program/program/
     - page: /publication/tmlr1
+      url_code: https://github.com/ZexinLi0w0/MixTraining
+      code_title: "Private repository — access required"
       title: "MixTraining: A Better Trade-Off Between Compute and Performance"
       url: https://openreview.net/forum?id=NVpS2g9KRo
       venue: "TMLR'26"
       cofirst: true
     - page: /publication/rtss25_1
+      url_code: https://github.com/yul091/LM-profiling
       url: https://doi.org/10.1109/RTSS66672.2025.00052
       venue: "RTSS'25"
       award: Outstanding Paper Award
@@ -34,6 +39,7 @@ content:
       url: https://doi.org/10.1109/RTSS59052.2023.00021
       venue: "RTSS'23"
     - page: /publication/rtss23_2
+      url_code: https://github.com/ZexinLi0w0/RED
       url: https://doi.org/10.1109/RTSS59052.2023.00027
       venue: "RTSS'23"
 design:
