@@ -1,5 +1,5 @@
-/* The author homepage shares one warm paper surface and a consistent reading width. */
-body:has(#about.wg-about) {
+/* Both portfolio pages use the same paper surfaces, typography, and reading width. */
+body:has(.profile-nav) {
   --page-background: #fbf6ec;
   --page-ink: #1d140e;
   --profile-muted: #65584d;
@@ -23,14 +23,18 @@ body:has(#about.wg-about) {
     scroll-margin-top: 1rem;
   }
 
-  #about {
+  #about, .publications-header {
     --page-background: #f4ecdd;
-    padding-top: 0 !important;
-    padding-bottom: clamp(2rem, 4vw, 3.7rem) !important;
+    background: var(--page-background);
     border-bottom: 1px solid var(--profile-rule);
   }
 
-  .home-section > .container {
+  #about {
+    padding-top: 0 !important;
+    padding-bottom: clamp(2rem, 4vw, 3.7rem) !important;
+  }
+
+  :is(.home-section, .publications-header) > .container {
     width: calc(100% - 3rem);
     max-width: 1120px;
     padding-inline: 0;
@@ -78,7 +82,7 @@ body:has(#about.wg-about) {
   }
 
   @media (max-width: 600px) {
-    .home-section > .container {
+    :is(.home-section, .publications-header) > .container {
       width: calc(100% - 2rem);
     }
   }
@@ -108,7 +112,7 @@ body:has(#about.wg-about) {
     }
   }
 
-  a:hover { color: var(--profile-accent); }
+  a:hover, a[aria-current="page"] { color: var(--profile-accent); }
 }
 
 .about-hero {
@@ -130,12 +134,15 @@ body:has(#about.wg-about) {
   letter-spacing: .125em;
 }
 
-.about-name {
-  grid-area: name;
+.about-name, .publications-title {
   font-size: clamp(2rem, calc(1.35rem + 3vw), 3.55rem);
   line-height: 1.1;
   color: var(--page-ink);
   letter-spacing: -.015em;
+}
+
+.about-name {
+  grid-area: name;
   margin: 0 0 .7rem;
 }
 
@@ -253,7 +260,7 @@ body:has(#about.wg-about) {
 }
 
 @media (max-width: 57.99em) {
-  html:has(#about.wg-about) { font-size: 100%; }
+  html:has(.profile-nav) { font-size: 100%; }
 }
 
 @media (max-width: 800px) {

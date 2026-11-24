@@ -87,10 +87,11 @@
         {{ range $selection := $block.Params.content.selected }}
           {{ $item := site.GetPage $selection.page }}
           {{ if not $item }}{{ errorf "Missing selected publication: %s" $selection.page }}{{ end }}
-          {{ partial "views/citation" (dict "page" $block "item" $item "selection" $selection) }}
+          {{ partial "views/citation" (dict "page" $block "item" $item "selection" $selection "code" $item.Params.url_code) }}
         {{ end }}
       </div>
     {{ else if $group_by_year }}
+      {{ $selected := ((site.GetPage "/home").Resources.GetMatch "publications.md").Params.content.selected | default slice }}
       {{ $current_year := "" }}
       {{ range $index, $item := $query }}
         {{ $year := $item.Date.Format "2006" }}
@@ -100,7 +101,8 @@
           <div class="pubs-year-list">
           {{ $current_year = $year }}
         {{ end }}
-        {{ partial "views/citation" (dict "page" $block "item" $item "index" $index) }}
+        {{ $selection := index (where $selected "page" $item.Path) 0 }}
+        {{ partial "views/citation" (dict "page" $block "item" $item "index" $index "selection" $selection "code" $item.Params.url_code) }}
       {{ end }}
       {{ if ne $current_year "" }}</div>{{ end }}
     {{ else }}

@@ -1,3 +1,8 @@
+.publications-title {
+  margin: 0;
+  padding-block: clamp(2rem, 5vw, 4.2rem) clamp(1.6rem, 3.3vw, 2.7rem);
+}
+
 #publications {
   .pubs-wrapper {
     padding-inline: 0;
@@ -5,6 +10,16 @@
 
   .pubs-year-list {
     gap: 0;
+  }
+
+  .pubs-year {
+    margin: 2rem 0 0;
+    padding-bottom: .5rem;
+    border-color: var(--profile-rule);
+    color: var(--profile-accent);
+    font-size: clamp(1.4rem, calc(1.2rem + .7vw), 1.75rem);
+
+    &:first-of-type { margin-top: 0; }
   }
 
   .pub-entry {

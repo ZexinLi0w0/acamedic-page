@@ -1,0 +1,9 @@
+{{ $home := cond .IsHome "" site.Home.RelPermalink }}
+<nav class="profile-nav" aria-label="Site navigation">
+  <a class="profile-nav__mark" href="{{ if .IsHome }}#top{{ else }}{{ $home }}{{ end }}" aria-label="{{ site.Title }}, homepage">ZL</a>
+  <div class="profile-nav__links">
+    <a href="{{ $home }}#news">News</a>
+    <a href="#publications"{{ if not .IsHome }} aria-current="page"{{ end }}>Publications</a>
+    <a href="{{ $home }}#service">Service</a>
+  </div>
+</nav>

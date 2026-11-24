@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="publications-header">
+  <div class="container">
+    {{ partial "profile_nav.html" . }}
+    <h1 class="publications-title">{{ .Title }}</h1>
+  </div>
+</header>
+{{ partial "widget_page.html" . }}
+{{ end }}

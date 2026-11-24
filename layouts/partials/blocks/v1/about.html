@@ -18,14 +18,7 @@
 {{ $person := $person_page.Params }}
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 
-<nav class="profile-nav" aria-label="Homepage sections">
-  <a class="profile-nav__mark" href="#top" aria-label="{{ $person_page.Title }}, top of page">ZL</a>
-  <div class="profile-nav__links">
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
-    <a href="#service">Service</a>
-  </div>
-</nav>
+{{ partial "profile_nav.html" $page }}
 
 <header class="about-hero">
   {{ with $person.role }}<p class="about-role">{{ . }}</p>{{ end }}
